@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>
+               <surname>פרנקל</surname>, <forename>אלונה</forename> (<surname>גולדמן</surname>,
+                  <forename>אילונה</forename>) <date when="1937">(1937) </date>
+            </title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <p> סופרת]= נולדה ב<placeName type="city">קראקוב</placeName>, <country>פולין</country>.
+               ב<date>מלחמת העולם השנייה</date>, לאחר חיסול <placeName>גטו לבוב</placeName>, התגלגלה
+            בין מקומות מחבוא, בתחילה ללא הוריה ובהמשך איתם. ב-<date when="1949">1949</date> עלתה
+               <country>לארץ</country> עם הוריה, והמשפחה השתקעה ב<placeName type="city">רמת
+               גן.</placeName> למדה אמנות ב<placeName>"מכון אבני"</placeName>, וכשהיתה בת שלושים
+            החלה לאייר ספרי ילדים. ב-<date when="1975">1975</date> ראה אור ספרה הראשון,<name
+               type="book"> סיר הסירים</name>, בהוצאת <orgName>מסדה</orgName>. הספר זכה להצלחה
+            מסחררת ב<country>ארץ</country> ו<placeName>בעולם</placeName>. כתבה ואיירה יותר משלושים
+            ספרי ילדים, וכן איירה עשרות ספרים של אחרים. ספריה הפכו לרבי-מכר ותורגמו לשפות רבות.
+            עבודותיה הוצגו בתערוכות שונות <country>בארץ</country> וב<placeName>חו"ל</placeName>.
+            מבחר ספרי ילדים פרי עטה: <name type="book">ספר הפילפילים</name> (<date when="1978"
+               >1978</date>); <name type="book">ספר הנימוסים</name> (<date when="1990">1990</date>);
+               <name type="book">מה אני רוצה להיות כשאהיה גדול</name> (<date when="2003"
+            >2003</date>); <name type="book">למה לנפתלי קוראים נפתלי </name>(<date when="2009"
+               >2009</date>). פירסמה שלושה רומנים אוטוביוגרפיים: <name type="book" xml:id="ילדה"
+               >ילדה</name>
+            <date when="2004">(2004)</date>, <name type="book" xml:id="נערה">נערה</name>
+            <date when="2009">(2009) </date><name type="book">ואישה</name>
+            <date when="2012"> (2012)</date>. שלושתם כתובים בגוף ראשון ומגוללים את סיפור חייה, שעבר
+            והווה משמשים בו בערבוביה. את ספרה האוטוביוגרפי הראשון, <name ref="#ילדה">ילדה</name>,
+            הגדיר יצחק לאור (<date when="2004">2004</date>) כאחד הספרים היפים ביותר שיצאו בעברית
+            בשנים ההן. הרומן מגולל את סיפור ההישרדות של הילדה <name>אילונה</name>
+               ב<country>פולין</country> של תקופת השואה. לאור טוען כי הפואטיקה של <name
+               xml:id="פרנקל">פרנקל</name> מתנגדת לכל ניסיון לנכס את הסיפור האישי לסיפור הלאומי
+            ולהכניס את ההטרוגניות ואת הסיפור הפרטי לתוך קטגוריות קולקטיביות. <name ref="נערה"
+               >נערה</name>, הספר השני בטרילוגיה, הוא רומן חניכה המגולל את סיפור עליית המשפחה
+               ל<country>ארץ</country> ואת קשיי הקליטה שלה. הוא משרטט חוויות הגירה רוויות באכזריות
+            ובכאב של נערה מתבגרת הנזרקת לתוך מציאות זרה ונאלצת ללמוד שפה חדשה, תוך שהיא מחפשת את
+            זהותה הייחודית. גם כנערה וכאישה מאופיינת הגיבורה של <name ref="פרנקל">פרנקל</name>
+            בנקודת מבט ילדית, משתאה, וכך נוצרת הזרה של המציאות. כעולה חדשה היא נותנת שמות חדשים
+            לשגור ולמוכר, את <country>ישראל</country> היא מכנה <quote>"המדינה של בני האדם
+               היהודים"</quote> ואת העברית <quote>"השפה שכותבים אותה הפוך"</quote>. נקודת המבט
+            הילדית מאפשרת לה לכרוך את הסיפור ה"גדול", על עליית הניצולים ל<country>ארץ</country>,
+            בסיפור ה"קטן", למשל על קבלת המחזור הראשון, וההבחנות בין החשוב יותר לחשוב פחות מיטשטשות.
+            מאפיין בולט נוסף בפואטיקה שלה הוא החזרה; חזרה על מילים, על משפטים, על שמות ועל פרטי
+            הטראומה. החזרה מקנה ליצירה ריתמוס ייחודי ומהווה ביטוי סגנוני לניסיונה של ילדה, עולה
+            חדשה, לבנות לעצמה זהות אינדיווידואלית מתוך השבר. דרך ההיאחזות במילה הזרה, חזרה עליה
+            ופירוקה, היא מייצרת שפה פרטית חתרנית שפותחת צוהר לביטוי חדש, אמנותי. החלק השלישי
+            בטרילוגיה, אישה, מציג את עמדתה הרפלקסיבית של <name ref="#פרנקל">פרנקל</name> הבוגרת על
+            סיפור חייה. זכתה בכמה פרסים לספרות ילדים, בהם עיטור אנדרסן (<date when="1982"
+               >1982</date>). ב-<date when="2005">2005</date> זכתה בפרס ספיר על ספרה ילדה וכן בפרס
+            בוכמן ("<placeName>יד ושם</placeName>"). </p>
+         <p>
+            <orgName>אדיבי-שושן</orgName>, <forename>אסתר</forename>. "אין אצלנו אילונה. אילנה זה שם
+            עברי הולם". <orgName>הארץ ספרים</orgName>.<date when="2009-12-18"> 18.12.2009.</date> 2;
+               <surname>דולן</surname>, <forename>ציפורה</forename>. "פצעי בגרות". הארץ ספרים. <date
+               when="2009-10-07">7.10.2009</date>. 6; <surname>הרציג</surname>,
+               <forename>חנה</forename>. "הכישרון ליופי והדמעות שלא נבכו". הארץ ספרים. <date
+               when="2004-03-24">24.3.2004. </date>2; לאור, יצחק. "הילדה ההיא איננה אנחנו".
+               <orgName>הארץ תרבות וספרות</orgName>. <date when="2004-06-25">25.6.2004</date>. ה'4.
+               <surname>רותם</surname>
+            <forename>רז</forename>
+         </p>
+      </body>
+   </text>
+</TEI>

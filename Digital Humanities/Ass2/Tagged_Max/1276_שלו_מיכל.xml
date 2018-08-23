@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+ Name:  שלו,  מיכל
+  <foreign>Birth</foreign>  Year:  <date>1962
+</date>  <foreign>Birth</foreign>  Place:  <properName>ארצות</properName>  <properName>הברית</properName>  לאם
+  Occupation:  סופרת
+  <foreign>Entry</foreign>  writer:  <properName>אמנון</properName>  ז'קונט
+  <foreign>Entry</foreign>  Value:  
+  <verb>נולדה</verb>  בארצות  <properName>הברית</properName>  לאם  <adjective>אמריקנית</adjective>  ולאב  ישראלי.  כשהיתה  <noun>בת</noun>  <noun>שנה</noun>  <verb>עלתה</verb>  <noun>המשפחה</noun>  לישראל  והשתקעה  בקריית  אונו.  <verb>למדה</verb>  <noun>משפטים</noun>  באוניברסיטת  <properName>תל</properName>  <properName>אביב</properName>  ועבדה  כעורכת-דין  <properName>בניו</properName>  <properName>יורק</properName>  ובתל  אביב.  <adverb>במקביל</adverb>  <verb>פירסמה</verb>  <noun>סיפורים</noun>  <adjective>רומנטיים</adjective>  בשבועון  לאשה  <date>(1995-1994).</date>  אמה,  שגדלה  <preposition>על</preposition>  <noun>ברכי</noun>  <noun>התרבות</noun>  האמריקנית,  <copula>היתה</copula>  <adjective>ערה</adjective>  לפוטנציאל  <adjective>הגלום</adjective>  בסיפורים  רומנטיים,  ועודדה  אותה  <verb>לכתוב</verb>  <noun>רומן</noun>  בז'אנר  זה.  <pronoun>היא</pronoun>  <verb>כתבה</verb>  <numeral>שני</numeral>  ספרים,  <properName>ניקול</properName>  וקייט,  וחתמה  עליהם  בשם  בדוי,  <properName>אליזבת</properName>  סאנדס.  <noun>הספרים</noun>  <copula>היו</copula>  <verb>מיועדים</verb>  למכירה  בארצות  הברית,  <conjunction>אך</conjunction>  <verb>ראו</verb>  <noun>אור</noun>  <conjunction>גם</conjunction>  בעברית  <date>(1996).
+</date>  <noun>העיסוק</noun>  בכתיבה  <noun>קסם</noun>  לשלו  <adverb>יותר</adverb>  מעריכת-דין,  והיא  <verb>החליטה</verb>  <verb>להתמסר</verb>  לו.  <adverb>עוד</adverb>  באותה  <noun>שנה</noun>  <verb>פירסמה</verb>  <noun>ספר</noun>  שלישי,  <adverb>הפעם</adverb>  בשמה.  הספר,מלאכי  <adjective>עליון</adjective>  (זמורה-ביתן,  <date>1996),</date>  <verb>מתרחש</verb>  <preposition>על</preposition>  <noun>רקע</noun>  <noun>ההווי</noun>  <adjective>הישראלי</adjective>  ומגולל  <noun>פרשת</noun>  <noun>אהבים</noun>  <preposition>בין</preposition>  <noun>טייס</noun>  <noun>קרב</noun>  למוזיקאית  יפה,  <noun>עולה</noun>  <adjective>חדשה</adjective>  מרוסיה.  <pronoun>הוא</pronoun>  <copula>היה</copula>  לרב-מכר  וביסס  <at-preposition>את</at-preposition>  מעמדה  <shel-preposition>של</shel-preposition>  <noun>המחברת</noun>  <preposition>בין</preposition>  <noun>הסופרים</noun>  <participle>הנמכרים</participle>  <adverb>ביותר</adverb>  בישראל.  
+  הצלחתה  <adjective>המסחרית</adjective>  <shel-preposition>של</shel-preposition>  <noun>שלו</noun>  <noun>עמדה</noun>  בניגוד  <adjective>מוחלט</adjective>  למעמדה  בקהילה  הספרותית,  <verb>שבה</verb>  <verb>זכתה</verb>  ליחס  צונן.  <noun>מפנה</noun>  <adjective>מסוים</adjective>  בגישה  לספריה  <verb>חל</verb>  <preposition>אחרי</preposition>  פרסומו  <shel-preposition>של</shel-preposition>  <noun>הספר</noun>  <noun>שבועת</noun>  <properName>רחל</properName>  <date>(1997),</date>  <verb>שבו</verb>  <verb>השתלבו</verb>  <numeral>שני</numeral>  <noun>סיפורי</noun>  אהבה:  <verb>האחד</verb>  <verb>מתרחש</verb>  בימינו,  והאחר  בארץ  <properName>ישראל</properName>  <shel-preposition>של</shel-preposition>  <noun>שנות</noun>  <numeral>העשרים</numeral>  והשלושים.  <conjunction>גם</conjunction>  <noun>ספר</noun>  <pronoun>זה</pronoun>  <verb>זכה</verb>  להצלחה  <adjective>רבה</adjective>  מאוד,  והמבקרים  <verb>הסכימו</verb>  שהושקע  בו  <noun>מאמץ</noun>  <adjective>מחקרי</adjective>  <participle>המקנה</participle>  <conjunction>לו</conjunction>  <noun>ממד</noun>  <shel-preposition>של</shel-preposition>  <noun>עומק</noun>  <noun>מעבר</noun>  לסיפור  הרומנטי.  <preposition>בעקבות</preposition>  <noun>שבועת</noun>  <properName>רחל</properName>  <verb>פירסמה</verb>  <noun>שלו</noun>  <adverb>עוד</adverb>  <numeral>שני</numeral>  <noun>רומנים</noun>  מצליחים,  שנכתבו  כסאגות  <adjective>משפחתיות</adjective>  <adjective>רחבות</adjective>  יריעה:  <numeral>מאה</numeral>  <noun>חורפים</noun>  <date>(2001)</date>  <date>ורחמים(2005).</date>  אחריהם  <verb>כתבה</verb>  <noun>רומן</noun>  <adjective>קאמרי</adjective>  יותר,  <noun>הזדמנות</noun>  למשהו  <adjective>טוב</adjective>  <date>(2008),</date>  <participle>המגולל</participle>  <noun>סיפור</noun>  <noun>אהבה</noun>  <preposition>בין</preposition>  <noun>אישה</noun>  שאיבדה  <at-preposition>את</at-preposition>  בעלה  לעובד  <adjective>זר</adjective>  שאימת  <noun>הגירוש</noun>  <preposition>מן</preposition>  <noun>הארץ</noun>  <verb>מרחפת</verb>  <preposition>מעל</preposition>  ראשו.  <verb>פירסמה</verb>  <numeral>שלושה</numeral>  <noun>ספרי</noun>  <noun>ילדים</noun>  בשנים  <date>2009-2008,</date>  <date>וב-2010</date>  <verb>יצא</verb>  ספרה  ממערב  לירח.  
+  דמויותיה  <participle>גזורות</participle>  <preposition>על</preposition>  <noun>פי</noun>  <noun>המקובל</noun>  בספרות  הרומנטית.  <noun>הגיבורים</noun>  <pronomial>הם</pronomial>  נאים,  <noun>עזי</noun>  <noun>לב</noun>  ורגשיים  מאוד.  <conjunction>גם</conjunction>  <noun>העלילות</noun>  שהיא  <verb>טווה</verb>  <adjective>ממוקדות</adjective>  בסוגיות  <noun>האהבה</noun>  והזוגיות.  <preposition>עם</preposition>  זאת,  <conjunction>הן</conjunction>  <adjective>נקיות</adjective>  <preposition>מן</preposition>  המתקתקות,  <noun>המלאכותיות</noun>  והניתוק  מהמציאות  <adjective>העכשווית</adjective>  <participle>המאפיינים</participle>  <noun>רומנים</noun>  רומנטיים.  ספריה  <shel-preposition>של</shel-preposition>  <noun>שלו</noun>  <verb>מכילים</verb>  <noun>חומרים</noun>  <adjective>ריאליסטיים</adjective>  <adverb>מאוד</adverb>  בתוספת  <noun>ערך</noun>  היסטורי,  ולפעמים  <conjunction>גם</conjunction>  אידיאולוגי.  
+  References:  
+  ליבנה,  נרי.  "החיים  <adjective>מחוץ</adjective>  לקאנון".  הארץמוסף.  <date>12.10.2001;</date>  נגיד,  חיים.  "איך  <pronoun>היא</pronoun>  <verb>עושה</verb>  <at-preposition>את</at-preposition>  זה".  <noun>ידיעות</noun>  <adjective>אחרונות</adjective>  תרבות,  <noun>ספרות</noun>  אמנות.  <date>15.6.2001.</date>  28-27.
+ 
+		</body>
+	</text>
+</TEI>

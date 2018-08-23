@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+ Name:  <verb>הופרט</verb>  (ביגלאייזן),  <participle>הילדֶה</participle>  
+  <foreign>Birth</foreign>  Year:  <date>1910
+</date>  <foreign>Death</foreign>  Year:  <date>2000
+</date>  <foreign>Birth</foreign>  Place:  <noun>עיר</noun>  בילסקו-ביאלה,  דרום
+  Occupation:  <noun>סופרת</noun>  בשפה  הגרמנית
+  <foreign>Entry</foreign>  writer:  <properName>אלישע</properName>  <properName>פורת</properName>  ודקל  <properName>שי</properName>  שחורי
+  <foreign>Entry</foreign>  Value:  
+  <verb>נולדה</verb>  בעיר  בילסקו-ביאלה,  <noun>דרום</noun>  פולין,  למשפחת  <noun>סוחרים</noun>  <adjective>אדוקים</adjective>  שעסקו  במסחר  <noun>פירות</noun>  וירקות.  <noun>העיר</noun>  <copula>היתה</copula>  באזור  <noun>ההשפעה</noun>  <adjective>הגרמנית</adjective>  ובבית  <noun>הספר</noun>  <verb>למדו</verb>  בגרמנית,  <conjunction>אך</conjunction>  בבית  <noun>הוריה</noun>  <verb>התנהלו</verb>  <noun>החיים</noun>  ביידיש  ובפולנית.  <noun>המשפחה</noun>  <verb>קיימה</verb>  <noun>זיקה</noun>  לארץ  ישראל,  <properName>אביה</properName>  <verb>ביקר</verb>  בארץ  ואף  <verb>רכש</verb>  <noun>אדמות</noun>  באזור  <adjective>ברֵכות</adjective>  שלמה  ליד  <noun>בית</noun>  <date>לחם.ב-1935</date>  <verb>נישאה</verb>  <properName>לוולטר</properName>  <verb>הופרט</verb>  מהעיר  טשין,  צ'כיה,  שבא  מבית  <verb>מתבולל</verb>  אמיד.  <date>ב-1936</date>  <verb>נולד</verb>  בנם,  <properName>שמואל</properName>  <properName>תומס</properName>  הופרט,  שנקרא  <preposition>על</preposition>  שמו  <shel-preposition>של</shel-preposition>  <properName>תומס</properName>  מסריק.  <noun>ערב</noun>  <noun>מלחמת</noun>  <noun>העולם</noun>  <numeral>השנייה</numeral>  <verb>הגיע</verb>  <properName>ולטר</properName>  <adverb>ארצה</adverb>  <verb>להכין</verb>  <at-preposition>את</at-preposition>  <noun>עליית</noun>  <noun>המשפחה</noun>  והשתקע  בחיפה.  <preposition>עם</preposition>  <noun>הפלישה</noun>  <adjective>הנאצית</adjective>  לצ'כוסלובקיה  <verb>נותק</verb>  <noun>הקשר</noun>  <preposition>בין</preposition>  <noun>האב</noun>  <preposition>לבין</preposition>  <noun>האם</noun>  והבן.  <noun>הילדה</noun>  נדדה,  <noun>יד</noun>  ביד  <preposition>עם</preposition>  תומס,  במסע  נורא,  שבמהלכו  <verb>איבדה</verb>  <at-preposition>את</at-preposition>  <noun>רוב</noun>  משפחתה.  <noun>המסע</noun>  <verb>החל</verb>  בכפר  <adjective>פולני</adjective>  ומשם  לגטו  ז'שוב,  למחנה  <noun>מעצר</noun>  ולבסוף  לעשרים  ושניים  <noun>חודשי</noun>  <noun>אימה</noun>  <date>בברגן-בלזן.ב-1945</date>  <verb>התאחדה</verb>  <noun>המשפחה</noun>  בחיפה.  
+  <noun>הילדה</noun>  <verb>כתבה</verb>  <at-preposition>את</at-preposition>  <noun>סיפור</noun>  הצלתם,  שהגיע  ככתביד  לידיו  <shel-preposition>של</shel-preposition>  <properName>ארנולד</properName>  צווייג,  <noun>הסופר</noun>  הגרמני-יהודי  הנודע,  שישב  <conjunction>אז</conjunction>  בחיפה.  <pronoun>הוא</pronoun>  <verb>עיבד</verb>  וערך  <at-preposition>את</at-preposition>  הספר,  <conjunction>אך</conjunction>  <verb>לקח</verb>  אותו  לגרמניה  <adjective>המזרחית</adjective>  <conjunction>כאשר</conjunction>  <verb>שב</verb>  אליה.  הספר,Fahrt  <foreign>zum</foreign>  Acheron(Berlin  Verlag,  <date>1951),</date>  <verb>הופיע</verb>  <adverb>לראשונה</adverb>  בשמו  <shel-preposition>של</shel-preposition>  צווייג,  <conjunction>אך</conjunction>  <pronoun>הוא</pronoun>  <verb>ציין</verb>  שנכתב  <preposition>על</preposition>  <noun>פי</noun>  סיפורה  <shel-preposition>של</shel-preposition>  <noun>הילדה</noun>  הופרט,  וזכה  להצלחה  <adjective>מיידית</adjective>  ואף  <verb>תורגם</verb>  להולנדית  ולצ'כית.כותרתו  <verb>מדמה</verb>  <at-preposition>את</at-preposition>  נדודיהם  <shel-preposition>של</shel-preposition>  <numeral>השניים</numeral>  כמסע  לאכרון,  <verb>אחד</verb>  מנהרות  השאול.  
+  <verb>בנה</verb>  <shel-preposition>של</shel-preposition>  <noun>הילדה</noun>  <verb>ניסה</verb>  <preposition>במשך</preposition>  <noun>שנים</noun>  <verb>למצוא</verb>  <noun>מו"ל</noun>  <adjective>עברי</adjective>  לספר,  <conjunction>אך</conjunction>  <negation>לא</negation>  הצליח.  <preposition>בעקבות</preposition>  <noun>תוכנית</noun>  <noun>רדיו</noun>  שלו  <verb>נוצר</verb>  <noun>קשר</noun>  בינו  <preposition>לבין</preposition>  <noun>אבא</noun>  <properName>קובנר</properName>  והוצאת  מורשת,  והופרט  <verb>הכין</verb>  <at-preposition>את</at-preposition>  <noun>הגרסה</noun>  <adjective>העברית</adjective>  בשםיד  ביד  <preposition>עם</preposition>  תומי  <date>(1978).</date>  <noun>הספר</noun>  <verb>זכה</verb>  להצלחה  בארץ  ולכמה  מהדורות.  <noun>הנוסח</noun>  <adjective>העברי</adjective>  <adjective>המשותף</adjective>  <shel-preposition>של</shel-preposition>  <noun>הילדה</noun>  ובנה  <verb>תורגם</verb>  <adverb>מחדש</adverb>  לגרמנית,  לצ'כית,  לערבית,  לאנגלית  ולאמהרית.  ספרה  השני,  <noun>הרומן</noun>  <title>דוקטור</title>  <properName>ורוניקה</properName>  <date>(2000),</date>  <verb>ראה</verb>  <noun>אור</noun>  במלאות  לה  תשעים,  וגם  <pronoun>הוא</pronoun>  תורגם,  <noun>עובד</noun>  ונערך  <preposition>בידי</preposition>  <properName>שמואל</properName>  הופרט.  <noun>הרומן</noun>  <verb>סובב</verb>  <preposition>סביב</preposition>  חייה  <shel-preposition>של</shel-preposition>  <noun>רופאה</noun>  יהודייה,  כשמלחמת  <noun>העולם</noun>  והשואה  <verb>משמשות</verb>  <noun>רקע</noun>  לסיפור.  <noun>הילדה</noun>  <verb>הופרט</verb>  <verb>הניחה</verb>  אחריה  <numeral>שני</numeral>  <noun>רומנים</noun>  <adjective>גמורים</adjective>  בגרמנית  והתחלות  <shel-preposition>של</shel-preposition>  <noun>רומן</noun>  נוסף.
+  References:  
+  הופרט,  שמואל.  "מ'למה  <pronoun>זה</pronoun>  <verb>קרה</verb>  לנו?'  <preposition>אל</preposition>  'ידביד  <preposition>עם</preposition>  תומי',  גלגולי  <adjective>כתבהיד</adjective>  <shel-preposition>של</shel-preposition>  <noun>הילדה</noun>  <verb>הופרט</verb>  שהופיע  בהוצאת  'מורשת'  בשש  מהדורות".  <noun>ילקוט</noun>  מורשת.  מ"ח.  <date>1990.</date>  161-172.
+ 
+		</body>
+	</text>
+</TEI>

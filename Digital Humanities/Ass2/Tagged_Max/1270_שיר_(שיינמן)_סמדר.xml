@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+ <?xml  version="1.0"  encoding="UTF-8"?>
+  <?xml-model  href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng"  type="application/xml"  schematypens="http://relaxng.org/ns/structure/1.0"?>
+  <?xml-model  href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng"  type="application/xml"
+  	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+  <TEI  xmlns="http://www.tei-c.org/ns/1.0">
+        <teiHeader>
+              <fileDesc>
+                    <publicationStmt>
+                          <p>Publication  Information</p>
+                    </publicationStmt>
+                    <sourceDesc>
+                          <p>Information  about  the  source</p>
+                    </sourceDesc>
+              </fileDesc>
+        </teiHeader>
+        <text>
+              <body>
+    Name:    <properName>שיר</properName>    (שיינמן),    סמדר
+      <foreign>Birth</foreign>    Year:    <date><date>1957
+</date>  </date>    <foreign>Birth</foreign>    Place:    <properName>תל</properName>    אביב
+      Occupation:    סופרת,    עיתונאית,    <verb>מתרגמת</verb>    ופזמונאית
+      <foreign>Entry</foreign>    writer:    בתיה    שמעוני
+      <foreign>Entry</foreign>    Value:    
+      <verb>נולדה</verb>    בתל    אביב.    <verb>למדה</verb>    בתיכון    <adjective>הדתי</adjective>    "צייטלין"    בתל    אביב,    וסיימה    <noun>לימודי</noun>    <noun>ספרות</noun>    ופילוסופיה    באוניברסיטת    <properName>תל</properName>    אביב.    <at-preposition>את</at-preposition>    <noun>קריירת</noun>    <noun>הכתיבה</noun>    שלה    <verb>החלה</verb>    בגיל    חמש,    בכתיבת    <noun>קטעים</noun>    מחורזים,    ובגיל    <numeral>שמונה</numeral>    <adverb>כבר</adverb>    <verb>שימשה</verb>    ככתבת    <noun>צעירה</noun>    בשבועון    <noun>הילדים</noun>    <noun>הארץ</noun>    שלנו.    <preposition>אחר</preposition>    <pronoun>כך</pronoun>    <verb>כתבה</verb>    במעריבלנוער.    <noun>ספר</noun>    <noun>השירים</noun>    <numeral>הראשון</numeral>    שלה,    <noun>מונולוגים</noun>    <shel-preposition>של</shel-preposition>    <noun>נערה</noun>    (אלף,    <date><date>1973),</date></date>    <verb>יצא</verb>    לאור    כשהיתה    <noun>בת</noun>    שש-עשרה.    באותה    <noun>תקופה</noun>    <verb>אימצה</verb>    לעצמה    <at-preposition>את</at-preposition>    <noun>שם</noun>    <noun>העט</noun>    <properName>סמדר</properName>    שיר,    <conjunction>כדי</conjunction>    שבבית    <noun>הספר</noun>    <negation>לא</negation>    <verb>ייוודע</verb>    שהיא    <verb>כותבת</verb>    לעיתונים    חילוניים.
+      <pronoun>היא</pronoun>    <conjunction>אם</conjunction>    לשישה    ילדים.    במהלך    גידולם    <verb>החלה</verb>    <verb>לכתוב</verb>    <noun>ספרים</noun>    וסדרות    לילדים,    והפכה    לאחת    מסופרות    <noun>הילדים</noun>    <adjective>המצליחות</adjective>    בישראל.    בשנים    <date><date>1991-1982</date></date>    <verb>שהו</verb>    <properName>שיר</properName>    ובני    משפחתה    בארצות    הברית,    <noun>שם</noun>    <verb>פירסמה</verb>    <numeral>שבעה</numeral>    <noun>ספרים</noun>    באנגלית    ואת    <noun>ספר</noun>    <noun>השמות</noun>    <adjective>העבריים</adjective>    לילדים    <adjective>יהודים</adjective>    אמריקניים.    <verb>כתבה</verb>    כשלוש    <numeral>מאות</numeral>    וחמישים    <noun>ספרי</noun>    <noun>ילדים</noun>    ונוער    וכן    <numeral>עשרות</numeral>    <noun>קלטות</noun>    <noun>וידיאו</noun>    לילדים    (טיף    וטף,    חיבוקי,    <conjunction>בלי</conjunction>    <noun>חיתולים</noun>    ועוד),    <verb>תירגמה</verb>    <noun>ספרי</noun>    <noun>ילדים</noun>    מאנגלית    לעברית    וכתבה    <numeral>מאות</numeral>    פזמונים,    <preposition>בין</preposition>    <noun>השאר</noun>    בתחום    <noun>הזמר</noun>    הים-תיכוני.        
+      בשלהי    <noun>שנות</noun>    <numeral>התשעים</numeral>    <shel-preposition>של</shel-preposition>    <numeral>המאה</numeral>    <numeral>העשרים</numeral>    <verb>החלה</verb>    <verb>לפרסם</verb>    <noun>רומנים</noun>    למבוגרים,    שכולם    <verb>ראו</verb>    <noun>אור</noun>    בהוצאת    <noun>ידיעות</noun>    אחרונות.    <numeral>הראשון</numeral>    שבהם    –מגירות    <noun>אהבה</noun>    <adjective>נעולות</adjective>    <date><date>(1998),</date></date>    <verb>מגולל</verb>    <at-preposition>את</at-preposition>    סיפורה    <shel-preposition>של</shel-preposition>    <noun>אישה</noun>    <participle>המקווה</participle>    <verb>לבנות</verb>    <noun>חיים</noun>    <preposition>עם</preposition>    <noun>גבר</noun>    <verb>שבו</verb>    התאהבה,    <conjunction>כאשר</conjunction>    <noun>גבר</noun>    אחר,    שהכירה    בעבר,    <verb>שב</verb>    <preposition>אל</preposition>    חייה    ומאלץ    אותה    "לפתוח    <at-preposition>את</at-preposition>    המגירות"    שכבר    <adjective>נעלה</adjective>    ולהתמודד    <preposition>עם</preposition>    תוכנן.    ספרה    הבא,    <noun>כתם</noun>    <noun>לידה</noun>    <date><date>(2001),</date></date>    <noun>עוסק</noun>    בנערה    <noun>צעירה</noun>    <participle>היולדת</participle>    <noun>תינוק</noun>    כתוצאה    מאונס    ומוסרת    <quantifier>אותו</quantifier>    לאימוץ.    שמונה-עשרה    <noun>שנה</noun>    <preposition>אחר</preposition>    <pronoun>כך</pronoun>    <pronoun>היא</pronoun>    <verb>מחליטה</verb>    <verb>להגיש</verb>    <noun>תלונה</noun>    <preposition>נגד</preposition>    <noun>האנס</noun>    וגם    <verb>לצאת</verb>    למסע    <noun>חיפושים</noun>    <preposition>אחרי</preposition>    בנה,    שכל    <adjective>הזכור</adjective>    לה    ממנו    <pronoun>הוא</pronoun>    <noun>כתם</noun>    <noun>לידה</noun>    קטן,    בגודל    <shel-preposition>של</shel-preposition>    כפתור,    שהיה    <adjective>טבוע</adjective>    <preposition>על</preposition>    חזהו.
+      <noun>שנה</noun>    <preposition>אחרי</preposition>    <noun>כתם</noun>    <noun>לידה</noun>    <verb>ראה</verb>    <noun>אור</noun>    ספרה    <noun>רומן</noun>    <properName>אמיתי</properName>    <date><date>(2002),</date></date>    ובו    <verb>נודע</verb>    לאם    <noun>צעירה</noun>    שבנה    <adjective>הקטן</adjective>    <adjective>זקוק</adjective>    להשתלת    כליה.    <pronoun>היא</pronoun>    <verb>מגלה</verb>    לבעלה    שהילד    <pronoun>הוא</pronoun>    <noun>פרי</noun>    אהבתה    <adjective>האסורה</adjective>    לגבר    ערבי,    ופותחת    בחיפוש    <preposition>אחר</preposition>    אביו    <shel-preposition>של</shel-preposition>    התינוק,    <conjunction>בעוד</conjunction>    <noun>המחלה</noun>    <verb>הולכת</verb>    ומכלה    <at-preposition>את</at-preposition>    בנה.    ספרה    <negation>אין</negation>    בעולם    <noun>אהבה</noun>    <conjunction>כמו</conjunction>    <verb>ראה</verb>    <noun>אור</noun>    <date><date>ב-2003.</date></date>    במרכזו    <noun>בני</noun>    <noun>זוג</noun>    <noun>הבוחרים</noun>    באם    <adjective>פונדקאית</adjective>    מארצות    הברית.    <noun>האם</noun>    <adjective>ההרה</adjective>    <verb>מגיעה</verb>    מארצות    <properName>הברית</properName>    לביקור    בארץ    <preposition>עם</preposition>    ילדתה    הקטנה.    כשהילדה    <verb>נהרגת</verb>    בפיגוע    <noun>האם</noun>    נעלמת,    ומאותו    <noun>רגע</noun>    <verb>עומד</verb>    <conjunction>גם</conjunction>    <noun>ספר</noun>    <pronoun>זה</pronoun>    בסימן    <shel-preposition>של</shel-preposition>    <noun>מסע</noun>    חיפושים,    שהזוג    <verb>מנהל</verb>    <preposition>אחרי</preposition>    הפונדקאית.    
+      <noun>הגבר</noun>    שלך    <date><date>(2005)</date></date>    <verb>מגולל</verb>    <at-preposition>את</at-preposition>    סיפורה    <shel-preposition>של</shel-preposition>    <noun>אשת</noun>    <noun>עסקים</noun>    <adjective>מצליחה</adjective>    <participle>המתאהבת</participle>    בזמר    מזרחי.    <noun>מערכת</noun>    <noun>היחסים</noun>    שלהם    <verb>מכילה</verb>    <noun>תככים</noun>    וסודות,    <noun>תחרות</noun>    ותשוקה.    <noun>גיבורה</noun>    במילים    <date><date>(2007)</date></date>    <verb>מעוגן</verb>    במלחמת    <properName>לבנון</properName>    השנייה,    <conjunction>כאשר</conjunction>    <noun>גיבורת</noun>    <noun>הספר</noun>    <verb>משדרת</verb>    ברדיו    <noun>תוכניות</noun>    <noun>ייעוץ</noun>    והפעלה    לילדים    שבמקלטים,    <verb>מארחת</verb>    בביתה    <noun>פליטים</noun>    מהצפון    ובחדרי    <noun>חדרים</noun>    <verb>מתפרקת</verb>    מרוב    <noun>דאגה</noun>    לבתה    הבכורה,    שבחזית.    <preposition>עד</preposition>    <noun>סוף</noun>    <noun>הים</noun>    <date><date>(2008)</date></date>    <verb>משרטט</verb>    <at-preposition>את</at-preposition>    <noun>הנוף</noun>    <adjective>האנושי</adjective>    <shel-preposition>של</shel-preposition>    <properName>תל</properName>    <properName>אביב</properName>    <adjective>העכשווית</adjective>    <preposition>באמצעות</preposition>    <numeral>ארבעה</numeral>    <noun>אנשים</noun>    שאין    ביניהם    <quantifier>כל</quantifier>    קשר,    <verb>פרט</verb>    לכך    שכולם    <verb>מתכוננים</verb>    לחגיגות    <numeral>המאה</numeral>    <shel-preposition>של</shel-preposition>    <noun>העיר</noun>    <adjective>העברית</adjective>    הראשונה.
+      כתיבתה    <verb>מתאפיינת</verb>    בקריאות    בולטת.    ספריה    <copula>היו</copula>    רבי-מכר,    וחלקם    <verb>נבחרו</verb>    למצעד    <noun>הספרים</noun>    השנתי.    <date><date>ב-2007</date></date>    <verb>זכתה</verb>    בפרס    <properName>אקו"ם</properName>    <preposition>על</preposition>    ספרה    העשירי,    <date><date>וב-2008</date></date>    <verb>קיבלה</verb>    <at-preposition>את</at-preposition>    <noun>אות</noun>    <noun>אשת</noun>    <noun>העיר</noun>    <properName>תל</properName>    אביב.
+      אלבוים,    אתי.    "מכונת    כתיבה". מקור    <numeral>ראשון</numeral>    דיוקן.    <date><date>11.4.2008.</date></date>    30-28,    32;    עזגד,    יבשם. "החיים    כזינוק    מוות". הארץ    <date><date>ספרים.3.3.1993.</date></date>    12.    
+      References:    
+    
+  		</body>
+  	</text>
+  </TEI> 
+		</body>
+	</text>
+</TEI>

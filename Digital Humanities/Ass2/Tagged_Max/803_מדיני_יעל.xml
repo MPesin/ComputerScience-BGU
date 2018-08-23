@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+ Name:  מדיני,  יעל
+  <foreign>Birth</foreign>  Year:  <date>1930
+</date>  <foreign>Birth</foreign>  Place:  <properName>תל</properName>  <properName>אביב</properName>  וגדלה
+  Occupation:  סופרת
+  <foreign>Entry</foreign>  writer:  <properName>רותם</properName>  רז
+  <foreign>Entry</foreign>  Value:  
+  <verb>נולדה</verb>  בתל  <properName>אביב</properName>  וגדלה  בירושלים.  בתם  <shel-preposition>של</shel-preposition>  <properName>ציפורה</properName>  ומשה  שרת,  <noun>ראש</noun>  <noun>הממשלה</noun>  השני,  ואחייניתו  <shel-preposition>של</shel-preposition>  <properName>אליהו</properName>  גולומב.  <verb>למדה</verb>  <noun>מוזיקה</noun>  בקונסרבטוריון  בירושלים.  בתקופת  <noun>מלחמת</noun>  <noun>השחרור</noun>  <verb>שירתה</verb>  בגדוד  <numeral>השישי</numeral>  <shel-preposition>של</shel-preposition>  הפלמ"ח.  <noun>בעלת</noun>  <noun>תואר</noun>  <numeral>ראשון</numeral>  ושני  מהאנטר  <properName>קולג'</properName>  ומאוניברסיטת  <properName>ניו</properName>  <properName>יורק</properName>  בספרות  <properName>אנגלית</properName>  ובפסיכולוגיה  חינוכית.
+  <verb>פירסמה</verb>  <noun>ספרים</noun>  לילדים,  לנוער  ולמבוגרים.  <noun>סיפורי</noun>  <noun>הילדים</noun>  שלה  <verb>פורסמו</verb>  באסופות  <noun>דוגמת</noun>  <noun>החבר</noun>  שלי,  <noun>החברה</noun>  <date>שלי(2002)</date>  ובחוברות  לימוד,  ותסכיתיה  <verb>שודרו</verb>  ב"קול  ישראל".  ספרה  <numeral>הראשון</numeral>  לילדים,  <noun>שירי</noun>  אלף-בית,  <verb>ראה</verb>  <noun>אור</noun>  <date>ב-1961,</date>  והרומן  <numeral>הראשון</numeral>  שלה  למבוגרים,  <noun>קווים</noun>  וקשתות,  <verb>ראה</verb>  <noun>אור</noun>  <date>ב-1977</date>  (ספרי  <noun>סימן</noun>  קריאה).  <pronoun>כך</pronoun>  <verb>כתבה</verb>  <preposition>על</preposition>  <noun>הרומן</noun>  <properName>רות</properName>  <properName>אלמוג</properName>  <date>(2012):</date>  "עלילת  <noun>הרומאן</noun>  <verb>מתפתחת</verb>  באיטיות  והיא  <noun>רוויית</noun>  <noun>תשוקות</noun>  אפלות,  שגעון,  <noun>מין</noun>  ומוות.  <noun>דרך</noun>  <noun>הסיפר</noun>  <adjective>מיוחדת</adjective>  במינה,  <adjective>מרובת</adjective>  <noun>פרטים</noun>  ודיאלוגים,  <adjective>מאופקת</adjective>  ועצורה,  <adverb>לפעמים</adverb>  <noun>ספק</noun>  <adjective>ממשית</adjective>  <noun>ספק</noun>  חלומית".  <noun>ספרים</noun>  <adjective>נוספים</adjective>  <properName>פרי</properName>  עטה:  <participle>הקבלייר</participle>  שלי:  ועוד  <noun>סיפורים</noun>  <date>(1987);</date>  <noun>הרומן</noun>  <properName>בלדה</properName>  לטרור  <date>(2000);</date>  <noun>קובץ</noun>  <noun>הסיפורים</noun>  <noun>גן</noun>  <noun>עדן</noun>  <preposition>על</preposition>  <noun>הגבול</noun>  <date>(2005);</date>  והרומן  <noun>המרתף</noun>  <date>(2009).</date>  סיפוריה  <verb>התפרסמו</verb>  בכתבי  <noun>עת</noun>  <adjective>שונים</adjective>  לספרות  בארץ,  וסיפוריה  באנגלית  <verb>התפרסמו</verb>  באסופות  שונות.  מספריה  לילדים  ונוער:  <noun>אלפסי</noun>  <noun>פינת</noun>  <properName>רד"ק</properName>  <date>(1990);</date>  לסבתא  <existential>יש</existential>  <noun>ציפורים</noun>  בראש  <date>(1993);געגועים</date>  <date>(2000).
+</date>  ביצירתה  <verb>מתמודדת</verb>  <adjective>מדיני</adjective>  <preposition>עם</preposition>  <noun>המציאות</noun>  הארץ-ישראלית:  <preposition>עם</preposition>  <noun>הסכסוך</noun>  הישראלי-פלסטיני,  <preposition>עם</preposition>  השכול,  <preposition>עם</preposition>  <noun>החלום</noun>  <adjective>הציוני</adjective>  ושברו.  במאמר  <noun>ביקורת</noun>  <preposition>על</preposition>  ספרה  <properName>בלדה</properName>  לטרורכותבת  <properName>רות</properName>  <properName>אלמוג</properName>  <date>(2001)</date>  <conjunction>כי</conjunction>  <adjective>מדיני</adjective>  <verb>מתעמתת</verb>  ביצירתה  <preposition>עם</preposition>  <noun>המציאות</noun>  <adjective>הטרגית</adjective>  <verb>שבה</verb>  <pronoun>אנחנו</pronoun>  <verb>חיים</verb>  <preposition>באמצעות</preposition>  <noun>טכניקות</noun>  <shel-preposition>של</shel-preposition>  <noun>הרחקה</noun>  והזרה.  <pronoun>היא</pronoun>  <verb>מוציאה</verb>  <at-preposition>את</at-preposition>  <noun>הסיפור</noun>  שלה  <noun>אל</noun>  <adjective>מחוץ</adjective>  לתחומי  <noun>המקום</noun>  והזמן  ועוטפת  אותו  בנופך  אגדתי.  <adverb>דווקא</adverb>  באמצעים  אלה,  <conjunction>כמו</conjunction>  <conjunction>גם</conjunction>  <preposition>באמצעות</preposition>  <noun>שפה</noun>  עשירה,  <participle>השואבת</participle>  מכל  רובדי  העברית,  ובאמצעות  <noun>בניית</noun>  <noun>משפטים</noun>  <adjective>מוזיקליים</adjective>  שלתוכם  <verb>משתרבבות</verb>  <quantifier>כל</quantifier>  <noun>העת</noun>  צרימות,  <pronoun>היא</pronoun>  <verb>מצליחה</verb>  <verb>לנסח</verb>  <noun>אמירה</noun>  <adjective>חתרנית</adjective>  וחזקה  <preposition>על</preposition>  <noun>המצב</noun>  הישראלי.  
+  <adjective>מדיני</adjective>  <verb>זכתה</verb>  בכמה  <noun>פרסים</noun>  <punctuation>–</punctuation>  <properName>פרס</properName>  <properName>יד</properName>  ושם  <date>ב-1998,</date>  <properName>פרס</properName>  <properName>זאב</properName>  <date>ב-1999,</date>  <properName>פרס</properName>  <properName>אקו"ם</properName>  בתחום  <noun>ספרות</noun>  <noun>הילדים</noun>  והנוער  <date>ב-2012</date>  <punctuation>–</punctuation>  <conjunction>אך</conjunction>  יצירתה,  <adverb>בעיקר</adverb>  למבוגרים,  <adverb>טרם</adverb>  <verb>זכתה</verb>  להכרה  שהיא  <adjective>ראויה</adjective>  לה.    
+  References:  
+  אלמוג,  רות.  "האמת  שמתחת  לרקמה".  <noun>עתון</noun>  <date>77256.</date>  <date>2001.</date>  7;  ---.  "יעל  מדיני:  <properName>וירג'יניה</properName>  <properName>וולף</properName>  הישראלית".  <noun>הארץ</noun>  ספרים.  <date>19.12.2012;</date>  מר,  בני.  "כאילו  <noun>טלית</noun>  שכל  <noun>צד</noun>  <verb>טוען</verb>  'כולה  שלי'  <adjective>מוכרחה</adjective>  להיקרע".  <noun>הארץ</noun>  <noun>תרבות</noun>  וספרות.  <date>22.12.2000.</date>  ב'14.
+ 
+		</body>
+	</text>
+</TEI>

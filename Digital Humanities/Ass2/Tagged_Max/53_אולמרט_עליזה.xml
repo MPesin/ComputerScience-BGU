@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+ Name:  אולמרט,  עליזה
+  <foreign>Birth</foreign>  Year:  <date>1946
+</date>  <foreign>Birth</foreign>  Place:  <noun>מחנה</noun>  <noun>הפליטים</noun>  אשווגה
+  Occupation:  <noun>סופרת</noun>  ומחזאית
+  <foreign>Entry</foreign>  writer:  <properName>רותם</properName>  רז
+  <foreign>Entry</foreign>  Value:  
+  <verb>נולדה</verb>  במחנה  <noun>הפליטים</noun>  <properName>אשווגה</properName>  בגרמניה  ועלתה  לארץ  <preposition>עם</preposition>  <noun>הוריה</noun>  <date>ב-1949.</date>  ילדותה  <verb>עברה</verb>  עליה  בתל  אביב,  ברמת  <properName>גן</properName>  ובחולון.  <verb>למדה</verb>  <noun>עבודה</noun>  <adjective>סוציאלית</adjective>  באוניברסיטה  <adjective>העברית</adjective>  בירושלים  וכן  <noun>עיצוב</noun>  <adjective>סביבתי</adjective>  ב"בצלאל".  <adjective>נשואה</adjective>  לאהוד  <properName>אולמרט</properName>  ואמה  <shel-preposition>של</shel-preposition>  <noun>החוקרת</noun>  והעורכת  <properName>דנה</properName>  אולמרט.  
+  <noun>המחזה</noun>  <noun>פנטסיה</noun>  לפסנתר  שכתבה,המספר  <at-preposition>את</at-preposition>  סיפורה  <shel-preposition>של</shel-preposition>  אנה,  <noun>ניצולת</noun>  <noun>שואה</noun>  <adjective>החוזרת</adjective>  לכפר  ילדותה  בפולין  <conjunction>כדי</conjunction>  <verb>להתחקות</verb>  <preposition>אחר</preposition>  עקבותיו  <shel-preposition>של</shel-preposition>  <noun>פסנתר</noun>  <noun>הכנף</noun>  שקנתה  לה  סבתה,  <verb>הוצג</verb>  בתיאטרון  "הקאמרי"  ובתיאטרון  "היילבורן"  בגרמניה.  <noun>דרמות</noun>  <noun>הטלוויזיה</noun>  <noun>מבחן</noun>  <noun>מגן</noun>  ושם  <verb>נרדף</verb>  (שכתבה  <preposition>עם</preposition>  <noun>סביון</noun>  ליברכט)  <verb>הוקרנו</verb>  בטלוויזיה  הישראלית.  <noun>תסריטים</noun>  <adjective>נוספים</adjective>  <properName>פרי</properName>  עטה:  <properName>ירושלים</properName>  <preposition>בין</preposition>  <adjective>שמיים</adjective>  <adjective>לארץ;פנמה;אפיקורס</adjective>  בעל  כורחו.  
+  <date>ב-2001</date>  <verb>ראה</verb>  <noun>אור</noun>  <noun>הרומן</noun>  שלה  <noun>פרוסה</noun>  <shel-preposition>של</shel-preposition>  <properName>ים</properName>  בהוצאת  זמורה-ביתן.  הרומן,  <participle>הגדוש</participle>  במרכיבים  אוטוביוגרפיים,  <verb>מתאר</verb>  <at-preposition>את</at-preposition>  <noun>סיפור</noun>  עלייתם  <shel-preposition>של</shel-preposition>  <numeral>שני</numeral>  <noun>הורים</noun>  <noun>ניצולי</noun>  <noun>שואה</noun>  ובתם  <adjective>הקטנה</adjective>  לארץ,  ופורש  <preposition>בפני</preposition>  <noun>הקורא</noun>  <at-preposition>את</at-preposition>  <noun>המפגש</noun>  <adjective>המורכב</adjective>  והאבסורדי  <adverb>לפרקים</adverb>  שלהם  <preposition>עם</preposition>  <noun>הארץ</noun>  החדשה.  <noun>היצירה</noun>  <verb>מתארת</verb>  באופן  <adjective>מצחיק</adjective>  ומכמיר  <noun>לב</noun>  <at-preposition>את</at-preposition>  <noun>הפער</noun>  <preposition>בין</preposition>  <noun>הילדה</noun>  <noun>הגדלה</noun>  בארץ  <preposition>לבין</preposition>  <noun>ההורים</noun>  "משם",  שלא  <verb>מצליחים</verb>  <verb>להסתגל</verb>  לדרישות  <shel-preposition>של</shel-preposition>  <properName>כור</properName>  <noun>ההיתוך</noun>  הישראלי.  
+  <properName>טלילה</properName>  קוש-זוהר  <date>(2007)</date>  <verb>משייכת</verb>  <at-preposition>את</at-preposition>  <noun>הרומן</noun>  לסיפורת  <noun>השואה</noun>  <shel-preposition>של</shel-preposition>  <noun>הדור</noun>  <numeral>השני</numeral>  שהחלה  <verb>להתפרסם</verb>  בארץ  בשנות  השמונים,  שבמסגרתה  <verb>התפרק</verb>  נרטיב-העל  <adjective>ההגמוני</adjective>  והסיפורים  <participle>המושתקים</participle>  <shel-preposition>של</shel-preposition>  <noun>דור</noun>  <noun>הניצולים</noun>  <verb>חדרו</verb>  <preposition>אל</preposition>  <noun>המרכז</noun>  הספרותי.  <pronoun>היא</pronoun>  <verb>תופשת</verb>  <at-preposition>את</at-preposition>  <noun>האם</noun>  אנושקה,  <noun>גיבורת</noun>  הרומן,  כדוברת  <shel-preposition>של</shel-preposition>  <noun>שיח</noun>  פוסט-ציוני,  שבסירובה  <verb>להכפיף</verb>  <at-preposition>את</at-preposition>  עצמה  לשיח  <adjective>הציוני</adjective>  ובהתעקשותה  <verb>להחדיר</verb>  לתוכו  <at-preposition>את</at-preposition>  <noun>שפת</noun>  <properName>אמה</properName>  ואת  עברה,  <verb>מפרקת</verb>  <at-preposition>את</at-preposition>  <noun>הרטוריקה</noun>  <adjective>האידיאולוגית</adjective>  ומציגה  <at-preposition>את</at-preposition>  <noun>מפעל</noun>  ה"לידה  מחדש"  <adjective>הציוני</adjective>  ככישלון.  <noun>הרומן</noun>  <verb>תורגם</verb>  לגרמנית  ולצרפתית  <date>וב-2008</date>  <verb>זכה</verb>  בפרס  <properName>סטייגר</properName>  (Steiger)  הגרמני.  <date>ב-2007</date>  <verb>ראה</verb>  <noun>אור</noun>  ספרה  <noun>שפת</noun>  קיר.  <noun>הספר</noun>  <verb>מכיל</verb>  <noun>אוסף</noun>  <noun>כתובות</noun>  <noun>גרפיטי</noun>  שצילמה  <preposition>במשך</preposition>  <numeral>שלושים</numeral>  שנה,  והן  <verb>מלוות</verb>  בטקסטים  <shel-preposition>של</shel-preposition>  <noun>הסופרת</noun>  <properName>גיל</properName>  הראבן.    
+  References:  
+  מלצר,  יורם.  "כאבי  <noun>ההגירה</noun>  <adjective>המוכרים</adjective>  האלה".  מעריבספרות  וספרים.  <date>23.11.2001.</date>  26;  קוש-זוהר,  טלילה.  "לזכור  <conjunction>או</conjunction>  לשכוח:  (או)פוזיציות  ממוגדרות".  <noun>תיאוריה</noun>  וביקורת  30.  <date>2007.</date>  109-89.  
+ 
+		</body>
+	</text>
+</TEI>

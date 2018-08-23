@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+ <?xml  version="1.0"  encoding="UTF-8"?>
+  <?xml-model  href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng"  type="application/xml"  schematypens="http://relaxng.org/ns/structure/1.0"?>
+  <?xml-model  href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng"  type="application/xml"
+  	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+  <TEI  xmlns="http://www.tei-c.org/ns/1.0">
+        <teiHeader>
+              <fileDesc>
+                    <publicationStmt>
+                          <p>Publication  Information</p>
+                    </publicationStmt>
+                    <sourceDesc>
+                          <p>Information  about  the  source</p>
+                    </sourceDesc>
+              </fileDesc>
+        </teiHeader>
+        <text>
+              <body>
+    Name:    אברמסון,    שלומית
+      <foreign>Birth</foreign>    Year:    <date><date>1955
+</date>  </date>    <foreign>Birth</foreign>    Place:    <verb>גדלה</verb>    בירושלים    לאם
+      Occupation:    סופרת
+      <foreign>Entry</foreign>    writer:    <properName>נירית</properName>    קורמן
+      <foreign>Entry</foreign>    Value:    
+      <verb>נולדה</verb>    וגדלה    בירושלים    לאם    <noun>ילידת</noun>    <properName>רודוס</properName>    ולאב    ירושלמי.    <adjective>נשואה</adjective>    <verb>לאמן</verb>    לארי    אברמסון.    <verb>פירסמה</verb>    <preposition>עד</preposition>    <adverb>כה</adverb>    <numeral>שני</numeral>    רומנים.    <at-preposition>את</at-preposition>    ספרה    הראשון,    <noun>מעשה</noun>    <properName>תמר</properName>    (מודן,    <date><date>2005),</date></date>    <verb>החלה</verb>    <verb>לכתוב</verb>    כנערה.    כשלושים    <verb>שנה</verb>    <adverb>מאוחר</adverb>    <adverb>יותר</adverb>    <verb>עיבדה</verb>    והרחיבה    <at-preposition>את</at-preposition>    <noun>הסיפור</noun>    <adjective>הקצר</adjective>    ופירסמה    אותו    כרומן.
+      <noun>מעשה</noun>    תמר,המבוסס    <preposition>על</preposition>    סיפורה    <shel-preposition>של</shel-preposition>    <properName>תמר</properName>    <noun>אשת</noun>    <adjective>ער</adjective>    (בראשית    ל"ח),    <verb>משרטט</verb>    <noun>תמונה</noun>    <adjective>עשירה</adjective>    <shel-preposition>של</shel-preposition>    <noun>מציאות</noun>    <adjective>חברתית</adjective>    בתקופת    המקרא.    מקומו    <shel-preposition>של</shel-preposition>    <noun>אלוהים</noun>    <verb>נפקד</verb>    מהספר,    והאלים    <participle>הממלאים</participle>    <noun>תפקיד</noun>    <adjective>מרכזי</adjective>    בחיי    <noun>הדמויות</noun>    <pronoun>הם</pronoun>    <properName>תמוז</properName>    ואישתר.    <noun>עלילת</noun>    <noun>הרומן</noun>    <verb>מציבה</verb>    <noun>פרשנות</noun>    <adjective>חדשה</adjective>    למניעיה    <shel-preposition>של</shel-preposition>    תמר,    <preposition>תוך</preposition>    <noun>הפיכת</noun>    <noun>הטקסט</noun>    <adjective>המקראי</adjective>    <adjective>התמציתי</adjective>    לדרמה    <adjective>אנושית</adjective>    רבת-דמויות    ומעללים.
+      ספרה    השני,    <noun>מחברת</noun>    <noun>המילים</noun>    <adjective>הקשות</adjective>    <date><date>(2007),</date></date>    <verb>נסמך</verb>    <preposition>על</preposition>    ילדותה    <shel-preposition>של</shel-preposition>    אברמסון.    <noun>הרומן</noun>    <verb>משקף</verb>    <at-preposition>את</at-preposition>    <noun>הגעגועים</noun>    <shel-preposition>של</shel-preposition>    <noun>משפחת</noun>    <noun>האם</noun>    לרודוס,    <conjunction>אך</conjunction>    <conjunction>גם</conjunction>    <at-preposition>את</at-preposition>    <noun>תחושת</noun>    <noun>ההקלה</noun>    <shel-preposition>של</shel-preposition>    <noun>הבריחה</noun>    <adverb>משם</adverb>    <preposition>לפני</preposition>    <noun>מלחמת</noun>    <noun>העולם</noun>    השנייה.    <noun>גיבורת</noun>    <noun>הספר</noun>    <copula>היא</copula>    <noun>ילדה</noun>    שתקנית    בשם    נעמי,    <participle>האוספת</participle>    <preposition>אל</preposition>    <noun>מחברת</noun>    שנתן    לה    סבהּ    <noun>מילים</noun>    <adjective>קשות</adjective>    שהיא    <negation>לא</negation>    <verb>יודעת</verb>    <at-preposition>את</at-preposition>    פשרן.    <noun>קטעים</noun>    מהרומן    <adjective>כתובים</adjective>    <preposition>מתוך</preposition>    <noun>נקודת</noun>    <noun>הראות</noun>    <shel-preposition>של</shel-preposition>    נעמי,    <participle>המספרת</participle>    בשפתה    <adjective>הילדית</adjective>    והמשובשת    <preposition>על</preposition>    <noun>קורות</noun>    משפחתה.    <noun>המשפחה</noun>    <verb>עוברת</verb>    <noun>אירועים</noun>    קשים:    מותו    <shel-preposition>של</shel-preposition>    הסב,    <noun>הידרדרות</noun>    מצבה    <adjective>הרפואי</adjective>    <shel-preposition>של</shel-preposition>    <noun>הסבתא</noun>    שהופכת    למשותקת,    אשפוזו    <shel-preposition>של</shel-preposition>    <noun>האב</noun>    בבית    <adjective>חולים</adjective>    לחולי    <noun>נפש</noun>    ועוד.    <noun>סוף</noun>    <noun>הרומן</noun>    <verb>מביא</verb>    איתו    <noun>תיקון</noun>    וסיכוי    לאיחוד    <noun>התא</noun>    <adjective>המשפחתי</adjective>    שהתפרק.    
+      <noun>השועל</noun>    <shel-preposition>של</shel-preposition>    <noun>יום</noun>    <numeral>שני</numeral>    <date><date>(2011)</date></date>    <pronoun>הוא</pronoun>    <noun>סיפור</noun>    <participle>המתרחש</participle>    <preposition>במשך</preposition>    <preposition>אחר</preposition>    <noun>צהריים</noun>    <verb>אחד</verb>    בשכונה    <adjective>ירושלמית</adjective>    <noun>ערב</noun>    <noun>מלחמת</noun>    <numeral>ששת</numeral>    הימים.    בשלושת    ספריה    <verb>בולטת</verb>    <noun>היכולת</noun>    <verb>להעמיד</verb>    <noun>סיטואציות</noun>    <adjective>אנושיות</adjective>    <adjective>מורכבות</adjective>    ולעצב    אותן    <preposition>מתוך</preposition>    <noun>התבוננות</noun>    <adjective>דקה</adjective>    ובלשון    <adjective>מדויקת</adjective>    ובהירה.    
+      References:    
+      לנדאו,    תמר.    "בין    <noun>אנשי</noun>    ההר".    <noun>הארץ</noun>    ספרים.    <date><date>2005.</date></date>    10;    עפרת,    גדעון.    "מילים    <shel-preposition>של</shel-preposition>    שתיקה".    <noun>הארץ</noun>    ספרים.    <date><date>2007.</date></date>    4.    
+    
+  		</body>
+  	</text>
+  </TEI> 
+		</body>
+	</text>
+</TEI>

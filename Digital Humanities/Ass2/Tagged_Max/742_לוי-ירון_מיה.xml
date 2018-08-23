@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+ Name:  לוי-ירון,  מיה
+  <foreign>Birth</foreign>  Year:    <date>(1950
+</date>  <foreign>Birth</foreign>  Place:  <noun>קיבוץ</noun>  גברעם,  בתה
+  Occupation:  סופרת,  <noun>משוררת</noun>  ועורכת
+  <foreign>Entry</foreign>  writer:  <properName>דורון</properName>  <noun>ב'</noun>  כהן
+  <foreign>Entry</foreign>  Value:  
+  <verb>נולדה</verb>  בקיבוץ  גברעם,  בתה  <shel-preposition>של</shel-preposition>  <noun>המשוררת</noun>  <properName>חיה</properName>  ורד.  <verb>גדלה</verb>  ביישוב  <adjective>חופית</adjective>  ולמדה  בתיכון  "רופין"  בעמק  חפר.  <verb>למדה</verb>  <noun>ספרות</noun>  <adjective>עברית</adjective>  ופילוסופיה  באוניברסיטת  תלאביב.  <verb>התגוררה</verb>  <noun>שנים</noun>  <adjective>אחדות</adjective>  בלונדון.  <adverb>כיום</adverb>  <noun>תושבת</noun>  פרדסיה.  <verb>עוסקת</verb>  בעריכה  <adjective>לשונית</adjective>  וספרותית,  בהנחיית  <noun>כתיבה</noun>  <verb>יוצרת</verb>  ובביקורת  ספרות.  
+  ספרה  הראשון,  <noun>הדג</noun>  <numeral>החמישי</numeral>  <pronoun>הוא</pronoun>  שלך  (שוקן,  <date>1989),</date>  <verb>הופיע</verb>  במסגרת  <noun>סדרת</noun>  <noun>ספרים</noun>  לבני  הנעורים,  <conjunction>אבל</conjunction>  <pronoun>הוא</pronoun>  <adjective>כתוב</adjective>  ברמת  <noun>תחכום</noun>  <adjective>ספרותי</adjective>  שמתאימה  <conjunction>גם</conjunction>  לקריאה  בוגרת.  <pronoun>זהו</pronoun>  סיפורה  <shel-preposition>של</shel-preposition>  לולי,  <verb>ילדה</verb>  <noun>בת</noun>  שמונה,  שעוברת  <preposition>עם</preposition>  <noun>הוריה</noun>  מקיבוץ  <preposition>בתוך</preposition>  <noun>הארץ</noun>  <preposition>אל</preposition>  <noun>מוסד</noun>  <adjective>חינוכי</adjective>  <preposition>על</preposition>  <noun>חוף</noun>  הים.  <noun>הסיפור</noun>  <verb>מסופר</verb>  כולו  מנקודת  מבטה  <shel-preposition>של</shel-preposition>  לולי,  <conjunction>אבל</conjunction>  <noun>הקורא</noun>  <modal>עשוי</modal>  <verb>ללמוד</verb>  מדבריה  <adverb>יותר</adverb>  ממה  שמובן  לה  עצמה.  בספר  <verb>מתוארים</verb>  <conjunction>גם</conjunction>  מגעיה  <preposition>עם</preposition>  <noun>ילדים</noun>  <noun>בני</noun>  גילה,  <conjunction>אבל</conjunction>  כמיהתה  <adjective>העיקרית</adjective>  <verb>מופנית</verb>  לאמה,  שהפכה  מעיתונאית  למורה  ומפגינה  <noun>מרירות</noun>  ואכזבה  מחייה,  <noun>כמיהה</noun>  שנותרת  <wPrefix>בלתי</wPrefix>  <verb>מסופקת</verb>  בהיעדר  "סוף  טוב".  עולמה  <adjective>הפנימי</adjective>  <shel-preposition>של</shel-preposition>  הילדה,  <conjunction>כמו</conjunction>  <conjunction>גם</conjunction>  התבוננותה  בעולם  המבוגרים,  <verb>מתוארים</verb>  בדייקנות  ובלשון  עשירה.  
+  <conjunction>גם</conjunction>  במוקד  ספרה  השני,  <interrogative>מה</interrogative>  שאין  <date>לי(2004),</date>  <verb>עומדים</verb>  <noun>יחסי</noun>  אם-בת.  צילה,  <noun>אישה</noun>  <adjective>נשואה</adjective>  ואם  לילד  <properName>בן</properName>  חמש,  <verb>נלווית</verb>  לבעלה  לתקופת  עבודתו  בלונדון,  <adverb>שם</adverb>  <pronoun>היא</pronoun>  <verb>יוצרת</verb>  <noun>קשר</noun>  <preposition>עם</preposition>  <noun>עוד</noun>  <noun>משפחה</noun>  ישראלית,  ומתפתח  <conjunction>גם</conjunction>  <noun>רומן</noun>  <adjective>מחוץ</adjective>  לנישואים.  <properName>צילה</properName>  <verb>מתאמצת</verb>  <verb>לקיים</verb>  <noun>שגרת</noun>  חיים,  <conjunction>אבל</conjunction>  <verb>כורעת</verb>  <preposition>תחת</preposition>  <noun>נטל</noun>  <noun>האפשרויות</noun>  שלא  מומשו,  <noun>כולל</noun>  יחסיה  <preposition>עם</preposition>  אמה,  <noun>משוררת</noun>  שמאבדת  <adverb>בהדרגה</adverb>  <at-preposition>את</at-preposition>  בריאותה  <adjective>הגופנית</adjective>  והנפשית.  <noun>הספר</noun>  <adjective>כתוב</adjective>  משתי  <noun>נקודות</noun>  מבט:  <noun>מצילה</noun>  <verb>לומד</verb>  <noun>הקורא</noun>  <preposition>על</preposition>  חוויותיה  ועל  עולמה  הפנימי,  ומפי  <noun>מספרת</noun>  יודעת-כול  <preposition>על</preposition>  עולמה  ועל  הידרדרותה  <adjective>המתמדת</adjective>  <shel-preposition>של</shel-preposition>  האם.  <properName>צילה</properName>  <noun>עצמה</noun>  <pronoun>היא</pronoun>  <noun>משוררת</noun>  שלא  <verb>הגשימה</verb>  <at-preposition>את</at-preposition>  ייעודה,  <conjunction>אבל</conjunction>  הבחנותיה  <participle>הקולעות</participle>  וניסוחיה  <adjective>המקוריים</adjective>  <verb>מעידים</verb>  <preposition>על</preposition>  כישרונה.  
+  <adverb>במקביל</adverb>  לכתיבתה  בפרוזה,  <participle>הרוויה</participle>  <noun>לשון</noun>  שירית,  <noun>כתבה</noun>  <conjunction>גם</conjunction>  שירה,  <conjunction>אך</conjunction>  <verb>מיעטה</verb>  לפרסם.  <at-preposition>את</at-preposition>  <quantifier>מבחר</quantifier>  שיריה,  שנכתבו  לאורך  <numeral>ארבעים</numeral>  שנה,  <verb>פירסמה</verb>  בספרה  <properName>הים</properName>  <verb>ידע</verb>  (כרמל,  <date>2008).</date>  <noun>השירים</noun>  <verb>מתאפיינים</verb>  במלאות  <shel-preposition>של</shel-preposition>  <noun>חוויית</noun>  החיים,  <noun>הנעה</noun>  <preposition>בין</preposition>  <adjective>הפשוט</adjective>  והיומיומי  בחיי  <noun>אישה</noun>  בביתה  <preposition>לבין</preposition>  <noun>כמיהה</noun>  וצימאון  לעולמות  רחוקים.  <existential>יש</existential>  בהם  <noun>התבוננויות</noun>  <adjective>מדויקות</adjective>  ומלאות  <noun>הומור</noun>  במציאות,  <preposition>לצד</preposition>  <noun>ביטוי</noun>  <adjective>מורכב</adjective>  <shel-preposition>של</shel-preposition>  <noun>חוויות</noun>  <adjective>רגשיות</adjective>  עמוקות.  <noun>השירים</noun>  <verb>משקפים</verb>  <noun>קשר</noun>  <adjective>אמיץ</adjective>  <preposition>עם</preposition>  <noun>מקורות</noun>  <noun>התרבות</noun>  <adjective>העברית</adjective>  והעולמית.
+  References:  
+  בן,  מנחם.  "תשוקות  <verb>מנמיכות</verb>  טוס".  <properName>מעריב</properName>  ספרות.  <date>22.8.2008.</date>  25;  מדיני,  יעל.  "המילים  הנכונות".  <noun>עתון</noun>  77  300.  מרס-אפריל  <date>2005.</date>  15-14.    
+ 
+		</body>
+	</text>
+</TEI>

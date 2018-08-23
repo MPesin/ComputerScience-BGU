@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+ Name:  פרנקל,  <properName>זיגמונט</properName>  (זיגי)
+  <foreign>Birth</foreign>  Year:  <date>1929)</date>  
+  <foreign>Death</foreign>  Year:  <date>1997
+</date>  <foreign>Birth</foreign>  Place:  לבוב,  פולין,  למשפחה
+  Occupation:  <noun>סופר</noun>  ומשורר  בשפה  האנגלית
+  <foreign>Entry</foreign>  writer:  <properName>אלישע</properName>  פורת
+  <foreign>Entry</foreign>  Value:  
+  <verb>נולד</verb>  בלבוב,  פולין,  למשפחה  <adjective>חילונית</adjective>  משכילה.  אביו  <copula>היה</copula>  <noun>דוקטור</noun>  למשפטים  ובעל  נכסים.  אמו  <copula>היתה</copula>  <noun>דוקטור</noun>  לפולקלור  ולפילוסופיה.  <preposition>עם</preposition>  <noun>כיבוש</noun>  <properName>פולין</properName>  בידי  <noun>הנאצים</noun>  <verb>נמלטה</verb>  אמו  איתו  ועם  אחותו  <preposition>אל</preposition>  <noun>מעבר</noun>  לגבול  הסובייטי,  ונשלחה  למעמקי  סיביר,  לעיר  ברנאול.  אביו,  שהיה  <noun>קצין</noun>  בצבא  הפולני,  <verb>נעצר</verb>  <preposition>על</preposition>  <noun>ידי</noun>  <noun>הסובייטים</noun>  ונרצח  <adverb>יחד</adverb>  <preposition>עם</preposition>  <noun>קצינים</noun>  <adjective>פולנים</adjective>  אחרים.
+  <verb>שהה</verb>  <preposition>עם</preposition>  משפחתו  בסיביר  בשנות  המלחמה,  וסיים  <adverb>שם</adverb>  <at-preposition>את</at-preposition>  הגימנסיה.  <date>ב-1946</date>  <verb>שבה</verb>  <noun>המשפחה</noun>  לפולין,  והוא  <verb>יצא</verb>  <verb>לחפש</verb>  <at-preposition>את</at-preposition>  אביו.  <noun>בעת</noun>  <noun>החזרה</noun>  <verb>ניצלה</verb>  אמו  בנס  מ"פוגרום  קילצה"  <noun>הידוע</noun>  לשמצה.  <preposition>אחרי</preposition>  <noun>חיפושים</noun>  <verb>זיהה</verb>  <at-preposition>את</at-preposition>  <noun>אתר</noun>  <noun>הרצח</noun>  <verb>שבו</verb>  <verb>נספה</verb>  אביו.  <pronoun>הם</pronoun>  <verb>השתקעו</verb>  בוורוצלב,  והוא  <verb>השלים</verb>  <adverb>שם</adverb>  <at-preposition>את</at-preposition>  <noun>הבגרות</noun>  והחל  <verb>ללמוד</verb>  באוניברסיטה.  <date>ב-1948</date>  <verb>הזמין</verb>  אותו  <properName>דודו</properName>  <verb>לבוא</verb>  לקרדיף,  ויילס,  להמשך  לימודיו,  ושוב  <copula>היה</copula>  עליו  <verb>להשלים</verb>  <noun>בגרות</noun>  באנגלית.  <pronoun>הוא</pronoun>  <verb>החל</verb>  <verb>ללמוד</verb>  <adverb>שם</adverb>  <noun>הנדסת</noun>  מכונות,  <conjunction>אך</conjunction>  <verb>נדד</verb>  ללונדון  ומשם  לבריסל,  <preposition>אל</preposition>  <properName>דוד</properName>  אחר.  <pronoun>הוא</pronoun>  <copula>היה</copula>  פוליגלוט,  והשלים  <noun>בגרות</noun>  בארבע  לשונות:  רוסית,  פולנית,  <properName>אנגלית</properName>  וצרפתית.
+  <properName>פרנקל</properName>  <verb>הגיע</verb>  לביקור  בארץ  <date>ב-1953</date>  והחליט  <verb>להישאר</verb>  בה,  <conjunction>גם</conjunction>  <conjunction>משום</conjunction>  שהיתה  <adjective>נוחה</adjective>  לתחביביו:  דאייה,  <noun>צניחה</noun>  ורכיבה  <preposition>על</preposition>  אופניים.  <date>ב-1958</date>  <verb>נשא</verb>  לאישה  <at-preposition>את</at-preposition>  <noun>המאיירת</noun>  והסופרת  <properName>אלונה</properName>  פרנקל,  ולזוג  <verb>נולדו</verb>  <numeral>שני</numeral>  בנים.  בשנים  <date>1971-1967שהה</date>  בארצות  <properName>הברית</properName>  <preposition>עם</preposition>  משפחתו.  <verb>השתלב</verb>  בתעשייה  <adjective>הביטחונית</adjective>  בארץ  ועבד  בה  כמהנדס  <preposition>עד</preposition>  פרישתו  <adjective>המוקדמת</adjective>  <date>(1987).
+</date>  מראשית  יצירתו  <verb>כתב</verb>  <adverb>רק</adverb>  באנגלית,  שאותה  <verb>אימץ</verb>  מכל  <noun>הלשונות</noun>  שידע.  <noun>הסיפורת</noun>  שלו  <pronoun>היא</pronoun>  חריפה,  <adjective>הומוריסטית</adjective>  ואף  סרקסטית,  ויש  בה  <noun>אלמנטים</noun>  <adjective>רומנטיים</adjective>  ועלילתיים  שאימץ  מהמסורת  <adjective>הספרותית</adjective>  האנגלית.  מספריו  <verb>תורגמו</verb>  לערבית  ולעברית  ונדפסו  בכתבי  <noun>עת</noun>  ובמוסף  <noun>הספרות</noun>  <shel-preposition>של</shel-preposition>  עיתוןהארץ.  מסיפוריו  ומשיריו  <verb>תורגמו</verb>  לפולנית  ולגרמנית  וראו  <noun>אור</noun>  בכתבי  <noun>עת</noun>  בפולין  ובגרמניה.  <noun>קובץ</noun>  <properName>סיפוריוזקנתה</properName>  <shel-preposition>של</shel-preposition>  <properName>מכשפהתורגם</properName>  לעברית  <preposition>על</preposition>  <noun>ידי</noun>  ידידיו  וראה  <noun>אור</noun>  <date>ב-1980.
+</date>  <pronoun>הוא</pronoun>    <copula>היה</copula>  ממייסדי  <noun>אגודת</noun>  <noun>סופרי</noun>  <adjective>האנגלית</adjective>  בארץ  והרוח  <adjective>החיה</adjective>  בה  <preposition>עד</preposition>  מחלתו.  <verb>השתתף</verb>  בכתב  <noun>העת</noun>  שלה  ARC,  ואף  <verb>ערך</verb>  אותו.  סיפוריו  <verb>נדפסו</verb>  <conjunction>גם</conjunction>  בארצות  <noun>הברת</noun>  ובאנגליה,  ב-The  LondonMagazineוב-Transatlantic  Review.  סיפורו  "אוקטפוס"  <verb>זכה</verb>  בפרס  <adjective>ספרותי</adjective>  בארצות  הברית.
+  במלאות  <adjective>שנתיים</adjective>  למותו  <verb>הוציאה</verb>  <properName>אלונה</properName>  <properName>פרנקל</properName>  לזכרו  <verb>לקט</verb>  <noun>שירים</noun>  <verb>נבחרים</verb>  באנגלית  <date>(1999).
+</date>  References:  
+  בלאט,  אברהם."שני  מסלולים,  <preposition>על</preposition>  ספרו  <shel-preposition>של</shel-preposition>  <properName>זיגמונט</properName>  <properName>פרנקל</properName>  'זקנתה  <shel-preposition>של</shel-preposition>  מכשפה'".  הצופה.  <date>22.8.1980;</date>  <properName>בן</properName>  עזר,  אהוד."פרנקל  זיגמונט,  זקנתה  <shel-preposition>של</shel-preposition>  מכשפה".עתון  <date>7720.</date>  <date>1980.</date>  50-49.  
+ 
+		</body>
+	</text>
+</TEI>

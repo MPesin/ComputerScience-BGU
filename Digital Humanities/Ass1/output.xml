@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>
+               <surname>פרנקל</surname>, <forename>אלונה</forename> (<surname>גולדמן</surname>,
+                  <forename>אילונה</forename>) <date when="1937">(1937) </date>
+            </title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+ פרנקל,  <properName>אלונה</properName>  (גולדמן,  אילונה)
+  
+  <date>(1937)
+</date>  
+    
+  
+  סופרת
+  
+  <verb>נולדה</verb>  בקראקוב,  פולין.  במלחמת  <noun>העולם</noun>  השנייה,  <conjunction>לאחר</conjunction>  <noun>חיסול</noun>  <noun>גטו</noun>  לבוב,  <verb>התגלגלה</verb>  <preposition>בין</preposition>  <noun>מקומות</noun>  מחבוא,  בתחילה  <preposition>ללא</preposition>  <noun>הוריה</noun>  ובהמשך  איתם.  <date>ב-1949</date>  <verb>עלתה</verb>  לארץ  <preposition>עם</preposition>  הוריה,  והמשפחה  <verb>השתקעה</verb>  ברמת  גן.  <verb>למדה</verb>  <noun>אמנות</noun>  ב"מכון  אבני",  וכשהיתה  <noun>בת</noun>  <numeral>שלושים</numeral>  <verb>החלה</verb>  לאייר  <noun>ספרי</noun>  ילדים.
+  
+  <date>ב-1975</date>  <verb>ראה</verb>  <noun>אור</noun>  ספרה  הראשון,  <noun>סיר</noun>  הסירים,  בהוצאת  מסדה.  <noun>הספר</noun>  <verb>זכה</verb>  להצלחה  <verb>מסחררת</verb>  בארץ  ובעולם.  <noun>כתבה</noun>  ואיירה  <adverb>יותר</adverb>  משלושים  <noun>ספרי</noun>  ילדים,  וכן  <verb>איירה</verb>  <numeral>עשרות</numeral>  <noun>ספרים</noun>  <shel-preposition>של</shel-preposition>  אחרים.  ספריה  <verb>הפכו</verb>  לרבי-מכר  ותורגמו  לשפות  רבות.  עבודותיה  <verb>הוצגו</verb>  בתערוכות  <adjective>שונות</adjective>  בארץ  ובחו"ל.
+  
+  <quantifier>מבחר</quantifier>  <noun>ספרי</noun>  <noun>ילדים</noun>  <properName>פרי</properName>  עטה:  <noun>ספר</noun>  <verb>הפילפילים</verb>  <date>(1978);</date>  <noun>ספר</noun>  <noun>הנימוסים</noun>  <date>(1990);</date>  <interrogative>מה</interrogative>  <pronoun>אני</pronoun>  <verb>רוצה</verb>  <copula>להיות</copula>  כשאהיה  <adjective>גדול</adjective>  <date>(2003);</date>  <noun>למה</noun>  לנפתלי  <verb>קוראים</verb>  <properName>נפתלי</properName>  <date>(2009).
+</date>  
+  <verb>פירסמה</verb>  <numeral>שלושה</numeral>  <noun>רומנים</noun>  אוטוביוגרפיים:  <noun>ילדה</noun>  <date>(2004),</date>  <noun>נערה</noun>  <date>(2009)</date>  ואישה  <date>(2012).</date>  שלושתם  <adjective>כתובים</adjective>  בגוף  <numeral>ראשון</numeral>  ומגוללים  <at-preposition>את</at-preposition>  <noun>סיפור</noun>  חייה,  שעבר  והווה  <verb>משמשים</verb>  בו  בערבוביה.  
+  
+  <at-preposition>את</at-preposition>  ספרה  <adjective>האוטוביוגרפי</adjective>  הראשון,  ילדה,  <verb>הגדיר</verb>  <properName>יצחק</properName>  <preposition>לאור</preposition>  <date>(2004)</date>  כאחד  <noun>הספרים</noun>  <adjective>היפים</adjective>  <adverb>ביותר</adverb>  שיצאו  בעברית  בשנים  ההן.  <noun>הרומן</noun>  <verb>מגולל</verb>  <at-preposition>את</at-preposition>  <noun>סיפור</noun>  <noun>ההישרדות</noun>  <shel-preposition>של</shel-preposition>  <noun>הילדה</noun>  <properName>אילונה</properName>  בפולין  <shel-preposition>של</shel-preposition>  <noun>תקופת</noun>  השואה.  <preposition>לאור</preposition>  <verb>טוען</verb>  <conjunction>כי</conjunction>  <noun>הפואטיקה</noun>  <shel-preposition>של</shel-preposition>  <properName>פרנקל</properName>  <verb>מתנגדת</verb>  לכל  <noun>ניסיון</noun>  <verb>לנכס</verb>  <at-preposition>את</at-preposition>  <noun>הסיפור</noun>  <adjective>האישי</adjective>  לסיפור  <adjective>הלאומי</adjective>  ולהכניס  <at-preposition>את</at-preposition>  <noun>ההטרוגניות</noun>  ואת  <noun>הסיפור</noun>  <adjective>הפרטי</adjective>  <preposition>לתוך</preposition>  <noun>קטגוריות</noun>  קולקטיביות.    
+  
+  נערה,  <noun>הספר</noun>  <numeral>השני</numeral>  בטרילוגיה,  <pronoun>הוא</pronoun>  <noun>רומן</noun>  <noun>חניכה</noun>  <participle>המגולל</participle>  <at-preposition>את</at-preposition>  <noun>סיפור</noun>  <noun>עליית</noun>  <noun>המשפחה</noun>  לארץ  ואת  <noun>קשיי</noun>  <noun>הקליטה</noun>  שלה.  <pronoun>הוא</pronoun>  <verb>משרטט</verb>  <noun>חוויות</noun>  <noun>הגירה</noun>  <adjective>רוויות</adjective>  באכזריות  ובכאב  <shel-preposition>של</shel-preposition>  <noun>נערה</noun>  <verb>מתבגרת</verb>  <participle>הנזרקת</participle>  <preposition>לתוך</preposition>  <noun>מציאות</noun>  <adjective>זרה</adjective>  ונאלצת  <verb>ללמוד</verb>  <noun>שפה</noun>  חדשה,  <preposition>תוך</preposition>  שהיא  <verb>מחפשת</verb>  <at-preposition>את</at-preposition>  זהותה  הייחודית.
+  
+  <conjunction>גם</conjunction>  כנערה  וכאישה  <verb>מאופיינת</verb>  <noun>הגיבורה</noun>  <shel-preposition>של</shel-preposition>  <properName>פרנקל</properName>  בנקודת  <noun>מבט</noun>  ילדית,  משתאה,  וכך  <verb>נוצרת</verb>  <noun>הזרה</noun>  <shel-preposition>של</shel-preposition>  המציאות.  כעולה  <adjective>חדשה</adjective>  <pronoun>היא</pronoun>  <verb>נותנת</verb>  <noun>שמות</noun>  <adjective>חדשים</adjective>  לשגור  ולמוכר,  <at-preposition>את</at-preposition>  <properName>ישראל</properName>  <pronoun>היא</pronoun>  <noun>מכנה</noun>  "המדינה  <shel-preposition>של</shel-preposition>  <noun>בני</noun>  <noun>האדם</noun>  היהודים"  ואת  <adjective>העברית</adjective>  "השפה  שכותבים  אותה  הפוך".  <noun>נקודת</noun>  <noun>המבט</noun>  <adjective>הילדית</adjective>  <verb>מאפשרת</verb>  לה  <verb>לכרוך</verb>  <at-preposition>את</at-preposition>  <noun>הסיפור</noun>  ה"גדול",  <preposition>על</preposition>  <noun>עליית</noun>  <noun>הניצולים</noun>  לארץ,  בסיפור  ה"קטן",  <conjunction>למשל</conjunction>  <preposition>על</preposition>  <noun>קבלת</noun>  <noun>המחזור</noun>  הראשון,  וההבחנות  <preposition>בין</preposition>  <adjective>החשוב</adjective>  <adverb>יותר</adverb>  <verb>לחשוב</verb>  <noun>פחות</noun>  מיטשטשות.
+  
+  <noun>מאפיין</noun>  <adjective>בולט</adjective>  <adjective>נוסף</adjective>  בפואטיקה  שלה  <pronoun>הוא</pronoun>  החזרה;  <noun>חזרה</noun>  <preposition>על</preposition>  מילים,  <preposition>על</preposition>  משפטים,  <preposition>על</preposition>  <noun>שמות</noun>  ועל  <noun>פרטי</noun>  הטראומה.  <noun>החזרה</noun>  <verb>מקנה</verb>  ליצירה  <properName>ריתמוס</properName>  <adjective>ייחודי</adjective>  ומהווה  <noun>ביטוי</noun>  <noun>סגנוני</noun>  לניסיונה  <shel-preposition>של</shel-preposition>  ילדה,  <noun>עולה</noun>  חדשה,  <verb>לבנות</verb>  לעצמה  <noun>זהות</noun>  <adjective>אינדיווידואלית</adjective>  <preposition>מתוך</preposition>  השבר.  <noun>דרך</noun>  <noun>ההיאחזות</noun>  במילה  הזרה,  <noun>חזרה</noun>  עליה  ופירוקה,  <pronoun>היא</pronoun>  <verb>מייצרת</verb>  <noun>שפה</noun>  <adjective>פרטית</adjective>  <adjective>חתרנית</adjective>  שפותחת  <noun>צוהר</noun>  לביטוי  חדש,  אמנותי.  <noun>החלק</noun>  <numeral>השלישי</numeral>  בטרילוגיה,  אישה,  <verb>מציג</verb>  <at-preposition>את</at-preposition>  עמדתה  <noun>הרפלקסיבית</noun>  <shel-preposition>של</shel-preposition>  <properName>פרנקל</properName>  <adjective>הבוגרת</adjective>  <preposition>על</preposition>  <noun>סיפור</noun>  חייה.
+  
+  <verb>זכתה</verb>  בכמה  <noun>פרסים</noun>  לספרות  ילדים,  בהם  <noun>עיטור</noun>  <properName>אנדרסן</properName>  <date>(1982).</date>  <date>ב-2005</date>  <verb>זכתה</verb>  בפרס  <properName>ספיר</properName>  <preposition>על</preposition>  ספרה  <noun>ילדה</noun>  וכן  בפרס  <properName>בוכמן</properName>  ("יד  ושם").
+  
+    
+  
+  אדיבי-שושן,  אסתר.  "אין  <verb>אצלנו</verb>  אילונה.  <properName>אילנה</properName>  <pronoun>זה</pronoun>  <properName>שם</properName>  <adjective>עברי</adjective>  הולם".  <noun>הארץ</noun>  ספרים.  <date>18.12.2009.</date>  2;  דולן,  ציפורה.  "פצעי  בגרות".  <noun>הארץ</noun>  ספרים.  <date>7.10.2009.</date>  6;  הרציג,  חנה.  "הכישרון  ליופי  והדמעות  שלא  נבכו".  <noun>הארץ</noun>  ספרים.  <date>24.3.2004.</date>  2;  לאור,  יצחק.  "הילדה  <pronoun>ההיא</pronoun>  <copula>איננה</copula>  אנחנו".  <noun>הארץ</noun>  <noun>תרבות</noun>  וספרות.  <date>25.6.2004.</date>  ה'4.
+  
+    
+  
+  <properName>רותם</properName>  רז
+ 
+		</body>
+	</text>
+</TEI>

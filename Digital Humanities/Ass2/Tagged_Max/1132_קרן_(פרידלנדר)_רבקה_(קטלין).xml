@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+ Name:  <noun>קרן</noun>  (פרידלנדר),  <properName>רבקה</properName>  (קטלין)
+  <foreign>Birth</foreign>  Year:  <date>1946
+</date>  <foreign>Birth</foreign>  Place:  הונגריה
+  Occupation:  <noun>סופרת</noun>  ומבקרת
+  <foreign>Entry</foreign>  writer:  <properName>אביב</properName>  <adjective>עקרוני</adjective>  ותמר  סתר
+  <foreign>Entry</foreign>  Value:  
+  <verb>נולדה</verb>  בהונגריה.  <verb>עלתה</verb>  <adverb>ארצה</adverb>  <date>ב-1957</date>  <preposition>עם</preposition>  הוריה,  <noun>ניצולי</noun>  שואה,  ואח  קטן.  <verb>למדה</verb>  <noun>ציור</noun>  בירושלים  ובניויורק  ופילוסופיה,  <noun>ספרות</noun>  ופסיכולוגיה  באוניברסיטת  בר-אילן.  <noun>בעלת</noun>  <noun>תואר</noun>  <noun>שני</noun>  בפסיכולוגיה  <adjective>קלינית</adjective>  מאוניברסיטת  תלאביב.  <verb>עבדה</verb>  כספרנית,  <noun>מרפאה</noun>  באמנות  ופסיכולוגית  קלינית.  <verb>הציגה</verb>  <noun>תערוכות</noun>  <noun>ציורים</noun>  ברחבי  העולם.    
+  <verb>כותבת</verb>  בהונגרית  ובעברית.  <verb>השתתפה</verb>  בעריכת  <noun>המילון</noun>  ההונגרי-עברי  ועברי-הונגרי  <preposition>מאת</preposition>  <properName>אליעזר</properName>  גרוס.  <pronoun>היא</pronoun>  <verb>כותבת</verb>  מילדות,  והחל  מסוף  <noun>שנות</noun>  <numeral>השישים</numeral>  <verb>התפרסמו</verb>  סיפוריה  בעיתונות  ההונגרית.  <noun>שנים</noun>  <adjective>רבות</adjective>  <negation>לא</negation>  <verb>חיה</verb>  בארץ,  וספרה  <date>הפקרות(2010),</date>  שזכה  <copula>להיות</copula>  <noun>הספר</noun>  <numeral>הראשון</numeral>  שפתח  <at-preposition>את</at-preposition>  "הנמל",  <noun>סדרה</noun>  <adjective>חדשה</adjective>  לסיפורת  בעריכת  <properName>יחזקאל</properName>  רחמים,  <verb>ראה</verb>  <noun>אור</noun>  <preposition>לאחר</preposition>  חמש-עשרה  <noun>שנה</noun>  שבהן  <negation>לא</negation>  <verb>ראה</verb>  <noun>אור</noun>  <noun>ספר</noun>  שלה  בעברית.  <verb>פירסמה</verb>  <noun>ספרים</noun>  למבוגרים  העוסקים,  <preposition>בין</preposition>  השאר,  בחוויותיהם  <shel-preposition>של</shel-preposition>  <noun>מהגרים</noun>  שאוצרים  בתוכם  <at-preposition>את</at-preposition>  <noun>העולם</noun>  שעזבו  <preposition>לצד</preposition>  <noun>העולם</noun>  <adjective>החדש</adjective>  <verb>שבו</verb>  השתלבו,  באלימות  מלחמתית,  בסיפורי  <noun>אהבה</noun>  <adjective>סוערים</adjective>  ובחיפושים  <preposition>אחר</preposition>  זהות.  
+  <adverb>בנוסף</adverb>  <verb>כתבה</verb>  <noun>ספרים</noun>  לבני  <noun>נוער</noun>  ולילדים.  ספרה  <numeral>הראשון</numeral>  בעברית  <pronoun>הוא</pronoun>  <noun>ספר</noun>  <noun>ילדים</noun>  בשם  <properName>רותי</properName>  שמוטי  (מסדה,  <date>1970).</date>  ספרה  <noun>לילי</noun>  <adjective>הפרועה</adjective>  <date>(1978)</date>  <copula>היה</copula>  לספר  <properName>קאלט</properName>  בזכות  <noun>הסיפור</noun>  <adjective>המרגש</adjective>  <preposition>על</preposition>  <noun>אח</noun>  ואחות  שנשלחים  לפנימייה  בגיל  צעיר,  <noun>ההומור</noun>  <verb>שבו</verb>  והאיורים  <adjective>המשעשעים</adjective>  שמלווים  <at-preposition>את</at-preposition>  <noun>הסיפור</noun>  <properName>פרי</properName>  מכחולה.  <noun>ספרים</noun>  <adjective>נוספים</adjective>  שלה  שראו  <noun>אור</noun>  בעברית:  <noun>טעם</noun>  <date>הדבש(1990);</date>  <noun>אהבה</noun>  <date>אנושה(1992);</date>  <noun>אנטומיה</noun>  <shel-preposition>של</shel-preposition>  <date>נקמה(1993);</date>  טיטה  והשטן  <date>(1995).
+</date>  <numeral>חמישה</numeral>  מספריה  <verb>תורגמו</verb>  לגרמנית,  ואחדים  מסיפוריה  <adjective>הקצרים</adjective>  <verb>תורגמו</verb>  להונגרית,  לספרדית  ולרוסית.
+  <verb>זכתה</verb>  בפרס  <noun>קרן</noun>  <noun>היסוד</noun>  לספרות  <date>(1972),</date>  בפרס  <properName>נורדאו</properName>  <date>(1974),</date>  בפרס  למדן  <date>(1975),</date>  בפרס  <properName>רמתגן</properName>  <date>(1976),</date>  בפרס  <properName>זאב</properName>  לספרות  <noun>ילדים</noun>  ונוער  <date>(1986),</date>  בפרס  <adjective>קוגל</adjective>  <shel-preposition>של</shel-preposition>  <noun>עיריית</noun>  <properName>חולון</properName>  <date>(1995)</date>  ובציון  <verb>לשבח</verb>  <preposition>מטעם</preposition>  <noun>ממשלת</noun>  <properName>אוסטריה</properName>  בתחום  <noun>ספרות</noun>  <noun>הילדים</noun>  והנוער  <date>(2000).</date>  
+  References:  
+  מירן,  ראובן.  "הנוסחה  <verb>בולטת</verb>  מדי".  <noun>הארץ</noun>  ספרים.  <date>3.11.1993.</date>  6;  נגב,  אילת.  "סוד  אפל".  <noun>ידיעות</noun>  <adjective>אחרונות</adjective>  7  ימים.  <date>7.9.1990.</date>  52-50;  סערי,  רמי.  "לא  <modal>חייבים</modal>  <copula>להיות</copula>  גיבורים".  <date>הארץ.31.12.1993.</date>  ב'8.
+ 
+		</body>
+	</text>
+</TEI>

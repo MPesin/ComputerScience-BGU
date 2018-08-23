@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+ <?xml  version="1.0"  encoding="UTF-8"?>
+  <?xml-model  href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng"  type="application/xml"  schematypens="http://relaxng.org/ns/structure/1.0"?>
+  <?xml-model  href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng"  type="application/xml"
+  	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+  <TEI  xmlns="http://www.tei-c.org/ns/1.0">
+        <teiHeader>
+              <fileDesc>
+                    <publicationStmt>
+                          <p>Publication  Information</p>
+                    </publicationStmt>
+                    <sourceDesc>
+                          <p>Information  about  the  source</p>
+                    </sourceDesc>
+              </fileDesc>
+        </teiHeader>
+        <text>
+              <body>
+    Name:    <properName>שז</properName>    (ירושלמי,    אפרת)
+      <foreign>Birth</foreign>    Year:    <date><date>1959
+</date>  </date>    <foreign>Birth</foreign>    Place:    <noun>קריית</noun>    אונו
+      Occupation:    משוררת,    מחזאית    וסופרת
+      <foreign>Entry</foreign>    writer:    <properName>נוית</properName>    בראל
+      <foreign>Entry</foreign>    Value:    
+      <verb>נולדה</verb>    בקריית    אונו.    <verb>למדה</verb>    בתיכון    לאמנויות    <preposition>ע"ש</preposition>    <properName>תלמה</properName>    ילין.    <verb>שירתה</verb>    בצה"ל    בחיל    התותחנים.    <verb>עוסקת</verb>    בהנחיית    <noun>סדנאות</noun>    <noun>כתיבה</noun>    לשירה    ופרוזה.    <verb>עבדה</verb>    כעיתונאית    <noun>בעל</noun>    <noun>המשמר</noun>    בשנים    <date><date>1980-1990.</date></date>    <verb>פירסמה</verb>    מפרי    <verb>עטה</verb>    בכתבי    <noun>עת</noun>    לספרות    <verb>החל</verb>    <date><date>מ-1984.</date></date>    <noun>כלת</noun>    <noun>הפרס</noun>    <preposition>על</preposition>    <noun>שם</noun>    <properName>רון</properName>    <properName>אדלר</properName>    לשירה    <date><date>(1999)</date></date>    ופרס    <noun>ראש</noun>    <noun>הממשלה</noun>    ליצירה    <preposition>על</preposition>    <noun>שם</noun>    <properName>לוי</properName>    <properName>אשכול</properName>    <date><date>(2007).</date></date>    <date><date>ב-2004</date></date>    <verb>זכתה</verb>    בציון    "גיבורת    תרבות"    <preposition>מטעם</preposition>    <noun>הקהילה</noun>    ההומו-לסבית.    יצירותיה    <verb>שולבו</verb>    בתערוכות    <noun>ציור</noun>    <adjective>שונות</adjective>    ובהופעת    <noun>מחול</noun>    <shel-preposition>של</shel-preposition>    <noun>להקת</noun>    <properName>רנה</properName>    שיינפלד.    <numeral>שני</numeral>    <noun>מחזות</noun>    <properName>פרי</properName>    <verb>עטה</verb>    <verb>הופקו</verb>    והועלו    לבמות:    <adverb>הביתה</adverb>    (תיאטרון    "הסימטה",    <date><date>1995)</date></date>    ושרשרת    <noun>פנינים</noun>    <adjective>לבנה</adjective>    (פסטיבל    עכו,    <date><date>1998).</date></date>    <properName>שז</properName>    <verb>מופיעה</verb>    כזמרת    <participle>המקריאה</participle>    ושרה    <at-preposition>את</at-preposition>    שיריה,    ואף    <verb>הפיקה</verb>    <noun>דיסק</noun>    בשם    <noun>ריקוד</noun>    <adjective>המשוגעת</adjective>    <preposition>עם</preposition>    <noun>הגיטריסט</noun>    מירק    פדרנקו.    
+      <verb>פירסמה</verb>    <noun>ספר</noun>    <noun>שירה</noun>    אחד,    <noun>ריקוד</noun>    <adjective>המשוגעת</adjective>    (הקיבוץ    המאוחד,    <date><date>1999),</date></date>    שהכיל    <noun>שירים</noun>    שהתייחסו    באורח    אמיץ,    <conjunction>כן</conjunction>    וגלוי    להתעללות    ולגילוי    <noun>עריות</noun>    שמהם    <verb>סבלה</verb>    בילדותה.    <properName>אביבה</properName>    <properName>לורי</properName>    <date><date>(2001)</date></date>    <verb>סיכמה</verb>    <at-preposition>את</at-preposition>    <noun>הספר</noun>    כך:    "ספר    בוטה,    <verb>רווי</verb>    שנאה,    סבל,    אומללות,    תוקפנות,    <properName>רחמים</properName>    עצמיים,    שבו    <pronoun>היא</pronoun>    <verb>קראה</verb>    <properName>לילדוּתה</properName>    'אושוויץ',    לאביה    'היטלר'    ולאלוהים    'לסבית    <adjective>יפהפייה</adjective>    ונבונה',    ולפעמים    'זין'".    בשיר    "פרידה"    <verb>כתבה</verb>    שז:    "גַּעְגּוּעִים.    לְהִתְגַּעְגֵּעַ    לַיָּד    שֶמַּצְלִיפָה.    לְהִתְגַּעְגֵּעַ/    לָרֵיחַ    שֶׁלּוֹ    <properName>כְּשֶׁהוּא</properName>    <verb>מְאַמֵּץ</verb>    <properName>אוֹתִי</properName>    <properName>נֶגֶד</properName>    <properName>רְצוֹנִיאֶל</properName>    גּוּפוֹ.    גּוּפוֹ    שֶׁהוּא    גּוּפִי.    <properName>גּוּפִי</properName>    שֶׁהוּא    גּוּפוֹ.    <properName>אִמִּי</properName>    שֶׁהִיא    אִשְׁתּוֹ.    אִשְׁתּוֹ/שֶׁהִיא    אֲהוּבָתִי.    <participle>הוֹרַי</participle>    שֶׁהֵם    שׂוֹנְאַי.    <properName>שׂוֹנְאַי</properName>    שֶׁהֵם/    <participle>הַיְחִידִים</participle>    <adjective>שֶמֻכָּרִים</adjective>    לִי.    <properName>רַק</properName>    <properName>אֶת</properName>    הָרֵיחַ    <properName>שֶׁלָּהֶם</properName>    <properName>אֲנִי</properName>    רוֹצָה./    <properName>רַק</properName>    <properName>לַלִטּוּף</properName>    <noun>הַזֶּה</noun>    <properName>שֶׁלֹּא</properName>    בָּא/אַף    <participle>פַּעַם</participle>    <properName>לֹא</properName>    בָּא/    <properName>אֲנִי</properName>    <properName>מִשְׁתּוֹקֶקֶת</properName>    <properName>כָּל</properName>    <verb>הַיָּמִים</verb>    הָאֵלֶּה".
+      בגיל    <numeral>עשרים</numeral>    וחמש    <verb>החלה</verb>    <verb>לכנות</verb>    <noun>עצמה</noun>    "שז:    <noun>שם</noun>    זמני"    (וגם:    "שתמיד    זוכרת")    בניסיון    <verb>ליצור</verb>    לעצמה    <noun>זהות</noun>    <adjective>חדשה</adjective>    ולהתרחק    מעברה.    <date><date>ב-2001</date></date>    <verb>ראה</verb>    <noun>אור</noun>    <noun>רומן</noun>    <adjective>אוטוביוגרפי</adjective>    <adjective>בדוי</adjective>    <properName>פרי</properName>    עטה,    בשם    <verb>להחזיר</verb>    <at-preposition>את</at-preposition>    <noun>הפיות</noun>    לארץ    ישראל.    ביצירה    <pronoun>זו</pronoun>    <verb>חשפה</verb>    <at-preposition>את</at-preposition>    <noun>סבלות</noun>    ילדותה    מנקודות    <noun>תצפית</noun>    <adjective>שונות</adjective>    (בהן    <shel-preposition>של</shel-preposition>    כלב,    פרפר,    <shel-preposition>של</shel-preposition>    <numeral>שני</numeral>    <noun>ההורים</noun>    המתעללים,    <participle>המיוצגים</participle>    בשמותיהם    האמיתיים,    ושלה-עצמה    כבוגרת).    <conjunction>גם</conjunction>    בקובץ    <noun>הסיפורים</noun>    שפירסמה    <date><date>ב-2005,</date></date>    מאולפת,    <verb>ניכרים</verb>    <noun>רכיבים</noun>    <adjective>אוטוביוגרפיים</adjective>    ועיסוק    בכינון    <noun>זהות</noun>    ובהתבגרות    <preposition>מתוך</preposition>    <noun>ניכור</noun>    וכאב.    בחלק    <preposition>מן</preposition>    <noun>הסיפורים</noun>    <verb>מופיעה</verb>    <noun>הגיבורה</noun>    בשם    שז.    <numeral>ארבעה</numeral>    <noun>סיפורים</noun>    <preposition>מתוך</preposition>    <noun>קובץ</noun>    <noun>הסיפורים</noun>    <adjective>מאולפת</adjective>    עובדו    למחזה    בשם    <noun>הביוגרפיה</noun>    <adjective>המינית</adjective>    שלי    <preposition>על</preposition>    <noun>ידי</noun>    <noun>השחקנית</noun>    <properName>יונת</properName>    קלר.    <date><date>ב-2010</date></date>    <verb>יצא</verb>    <preposition>לאור</preposition>    ספרה    <adverb>הרחק</adverb>    מהיעדרו,    <participle>המעמיד</participle>    במרכזו    <noun>גילוי</noun>    <noun>עריות</noun>    <preposition>בין</preposition>    <noun>אישה</noun>    <adjective>צעירה</adjective>    לאביה.    <properName>שז</properName>    <noun>מנהלת</noun>    <noun>בלוג</noun>    <adjective>פופולרי</adjective>    באתר    <noun>בננות</noun>    בשם    "שדמעותיי    <verb>יהפכו</verb>    פנינים".    
+      References:    
+      שלוש,    שמעון.    "ונישקתי    אותך    ונשכתי    ושנאתי    <at-preposition>את</at-preposition>    ריחך".    <noun>הארץ</noun>    ספרים.    <date><date>16.2.2000.</date></date>    11;    לורי,    אביבה.    "ילדה    בשם    שז".    <noun>הארץ</noun>    מוסף.    <date><date>8.6.2001.</date></date>    52-50,    54;    סלע,    מיה.    "העולם    שלא    <verb>יינתן</verb>    שנית".    <noun>הארץ</noun>    גלריה.    <date><date>15.10.2010.</date></date>    4.
+    
+  		</body>
+  	</text>
+  </TEI> 
+		</body>
+	</text>
+</TEI>
