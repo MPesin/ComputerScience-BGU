@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Pesin</title>
+        <script type="text/javascript" src="node/lab11/check.js"></script>
+    </head>
+    <body>
+        <h1>Welcome to Michael Pesin's Homepage</h1>
+        <center>
+            <p>I'm Michael pesin. I enjoy long debates and love arguing.</p>
+            <p>This is me!</p>
+            <img src="me.jpg" alt="Michael Pesin" width="300" height="200"> 
+            <p>For more information about me please visit my Linkedin page:</p>
+            <a href="https://www.linkedin.com/in/michael-pesin-6b758110a" target="_blank">Michael Pesin - Linkedin</a>
+            <p>If you would like to send me an Email please fill the following form and submit:</p>
+            <p>* Required fields</p>
+
+            <form name="frm" id="frm" onsubmit="return check()" action="http://localhost:3000/sendmail" method="post">
+                <table style="40%">
+                    <tr>
+                        <th>Full Name*:</th>
+                        <td><input type="text" name="name"></td>
+                    </tr>
+                    <tr>
+                        <th>Email*:</th>
+                        <td><input type="text" name="email"></td>
+                    </tr>
+                    <tr>
+                        <th valign="top">Message*:</th> 
+                        <td height="200">
+                            <textarea style="height:200px; width:190px;" name="msg" value=""></textarea>
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" value="Submit">
+            </form>
+
+        </center>
+    </body>
+</html> 
