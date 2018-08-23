@@ -1,0 +1,22 @@
+makefile:
+line 140: -- no magic
+
+defs:
+changed decleration of allocuvm
+
+exec: 
+add to exec function elfWriteFlad (line 47)
+change every call to allocuvm
+
+proc:
+change call of allocuvm
+
+vm.c
+
+loaduvm:
+change validation of address as page align.
+
+allocuvm:
+change flags according to parameter
+
+

@@ -1,0 +1,11 @@
+--- user.h	(revision 3)
++++ user.h	(working copy)
+@@ -2,6 +2,8 @@
+ 
+ // system calls
+ int fork(void);
++int cowfork(void);
++int procdump(void);
+ int exit(void) __attribute__((noreturn));
+ int wait(void);
+ int pipe(int*);

@@ -1,0 +1,7 @@
+memory	10
+general	5
+termination	10
+security	10
+small_bugs	5
+big_file	20
+SQS_Visibility	5

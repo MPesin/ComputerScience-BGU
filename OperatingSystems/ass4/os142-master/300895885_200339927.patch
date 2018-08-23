@@ -1,0 +1,1062 @@
+Index: Makefile
+===================================================================
+--- Makefile	(revision 3)
++++ Makefile	(working copy)
+@@ -51,7 +51,7 @@
+ endif
+ 
+ # If the makefile can't find QEMU, specify its path here
+-#QEMU = qemu-system-x86_64
++QEMU = qemu-system-x86_64
+ 
+ # Try to infer the correct QEMU
+ ifndef QEMU
+@@ -135,7 +135,9 @@
+ ULIB = ulib.o usys.o printf.o umalloc.o
+ 
+ _%: %.o $(ULIB)
+-	$(LD) $(LDFLAGS) -N -e main -Ttext 0 -o $@ $^
++	#makes the text segment and force the data segment to be page aligned
++	$(LD) $(LDFLAGS) -N --no-omagic -e main -Ttext 0x1000 -o $@ $^
++	#$(LD) $(LDFLAGS) -N -e main -Ttext 0x1000 -o $@ $^
+ 	$(OBJDUMP) -S $@ > $*.asm
+ 	$(OBJDUMP) -t $@ | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$$/d' > $*.sym
+ 
+@@ -142,7 +144,7 @@
+ _forktest: forktest.o $(ULIB)
+ 	# forktest has less library code linked in - needs to be small
+ 	# in order to be able to max out the proc table.
+-	$(LD) $(LDFLAGS) -N -e main -Ttext 0 -o _forktest forktest.o ulib.o usys.o
++	$(LD) $(LDFLAGS) -N -e main -Ttext 0x1000 -o _forktest forktest.o ulib.o usys.o
+ 	$(OBJDUMP) -S _forktest > forktest.asm
+ 
+ mkfs: mkfs.c fs.h
+@@ -161,6 +163,11 @@
+ 	_sh\
+ 	_wc\
+ 	_zombie\
++	_s2\
++	_s3\
++	_s4\
++	_s5\
++	_sanityTest5\
+ 
+ fs.img: mkfs README $(UPROGS)
+ 	./mkfs fs.img README $(UPROGS)
+@@ -229,7 +236,7 @@
+ 
+ EXTRA=\
+ 	mkfs.c ulib.c user.h cat.c echo.c forktest.c grep.c kill.c\
+-	ln.c ls.c mkdir.c rm.c stressfs.c usertests.c wc.c zombie.c\
++	ln.c  ls.c mkdir.c rm.c stressfs.c usertests.c wc.c zombie.c\
+ 	printf.c umalloc.c\
+ 	README dot-bochsrc *.pl toc.* runoff runoff1 runoff.list\
+ 	.gdbinit.tmpl gdbutil\
+Index: defs.h
+===================================================================
+--- defs.h	(revision 3)
++++ defs.h	(working copy)
+@@ -105,6 +105,7 @@
+ struct proc*    copyproc(struct proc*);
+ void            exit(void);
+ int             fork(void);
++int             cowfork(void);
+ int             growproc(int);
+ int             kill(int);
+ void            pinit(void);
+@@ -170,8 +171,12 @@
+ int             deallocuvm(pde_t*, uint, uint);
+ void            freevm(pde_t*);
+ void            inituvm(pde_t*, char*, uint);
+-int             loaduvm(pde_t*, char*, struct inode*, uint, uint);
++int             loaduvm(pde_t*, char*, struct inode*, uint, uint,uint); //task3
+ pde_t*          copyuvm(pde_t*, uint);
++pde_t*          copyuvm_cow(pde_t*, uint);
++void 		handle_pgflt (void);
++uint 		read_cr2 (void);
++void 		flush_tlb_all (void);
+ void            switchuvm(struct proc*);
+ void            switchkvm(void);
+ int             copyout(pde_t*, uint, void*, uint);
+Index: exec.c
+===================================================================
+--- exec.c	(revision 3)
++++ exec.c	(working copy)
+@@ -12,7 +12,7 @@
+ {
+   char *s, *last;
+   int i, off;
+-  uint argc, sz, sp, ustack[3+MAXARG+1];
++  uint argc, sz, sp, ustack[3+MAXARG+1],writeFlag;
+   struct elfhdr elf;
+   struct inode *ip;
+   struct proghdr ph;
+@@ -32,8 +32,10 @@
+   if((pgdir = setupkvm(kalloc)) == 0)
+     goto bad;
+ 
+-  // Load program into memory.
+-  sz = 0;
++  // Load program into memory.- Task 2
++  sz = PGSIZE;
++  //sz = 0; old - changed for task2 , no access to address 0
++  
+   for(i=0, off=elf.phoff; i<elf.phnum; i++, off+=sizeof(ph)){
+     if(readi(ip, (char*)&ph, off, sizeof(ph)) != sizeof(ph))
+       goto bad;
+@@ -43,8 +45,14 @@
+       goto bad;
+     if((sz = allocuvm(pgdir, sz, ph.vaddr + ph.memsz)) == 0)
+       goto bad;
+-    if(loaduvm(pgdir, (char*)ph.vaddr, ip, ph.off, ph.filesz) < 0)
++    if (ph.flags & ELF_PROG_FLAG_WRITE)
++    	writeFlag = 1;
++    else
++    	writeFlag = 0;
++    if(loaduvm(pgdir, (char*)ph.vaddr, ip, ph.off, ph.filesz,writeFlag) < 0)
++    {
+       goto bad;
++    }
+   }
+   iunlockput(ip);
+   ip = 0;
+@@ -52,6 +60,7 @@
+   // Allocate two pages at the next page boundary.
+   // Make the first inaccessible.  Use the second as the user stack.
+   sz = PGROUNDUP(sz);
++  
+   if((sz = allocuvm(pgdir, sz, sz + 2*PGSIZE)) == 0)
+     goto bad;
+   clearpteu(pgdir, (char*)(sz - 2*PGSIZE));
+Index: mmu.h
+===================================================================
+--- mmu.h	(revision 3)
++++ mmu.h	(working copy)
+@@ -139,6 +139,8 @@
+ #define PTE_D           0x040   // Dirty
+ #define PTE_PS          0x080   // Page Size
+ #define PTE_MBZ         0x180   // Bits must be zero
++#define PTE_SH			0x200 // task4, COW or not
++#define PTE_WAS_WRITABLE	0x100 //task4 if was ORIGINALLY writable
+ 
+ // Address in page table or page directory entry
+ #define PTE_ADDR(pte)   ((uint)(pte) & ~0xFFF)
+@@ -201,6 +203,7 @@
+   uint off_31_16 : 16;  // high bits of offset in segment
+ };
+ 
++
+ // Set up a normal interrupt/trap gate descriptor.
+ // - istrap: 1 for a trap (= exception) gate, 0 for an interrupt gate.
+ //   interrupt gate clears FL_IF, trap gate leaves FL_IF alone
+Index: proc.c
+===================================================================
+--- proc.c	(revision 3)
++++ proc.c	(working copy)
+@@ -18,6 +18,7 @@
+ int nextpid = 1;
+ extern void forkret(void);
+ extern void trapret(void);
++extern uchar num_of_shares[];
+ 
+ static void wakeup1(void *chan);
+ 
+@@ -161,6 +162,46 @@
+   return pid;
+ }
+ 
++
++// Create a new process with COW
++// Sets up stack to return as if from system call.
++// Caller must set state of returned proc to RUNNABLE.
++int
++cowfork(void)
++{
++  int i, pid;
++  struct proc *np;
++
++  // Allocate process.
++  if((np = allocproc()) == 0)
++    return -1;
++
++  // Copy process state from p.
++  if((np->pgdir = copyuvm_cow(proc->pgdir, proc->sz)) == 0){
++    kfree(np->kstack);
++    np->kstack = 0;
++    np->state = UNUSED;
++    return -1;
++  }
++  np->sz = proc->sz;
++  np->parent = proc;
++  *np->tf = *proc->tf;
++
++  // Clear %eax so that fork returns 0 in the child.
++  np->tf->eax = 0;
++
++  for(i = 0; i < NOFILE; i++)
++    if(proc->ofile[i])
++      np->ofile[i] = filedup(proc->ofile[i]);
++  np->cwd = idup(proc->cwd);
++ 
++  pid = np->pid;
++  np->state = RUNNABLE;
++  safestrcpy(np->name, proc->name, sizeof(proc->name));
++  return pid;
++}
++
++
+ // Exit the current process.  Does not return.
+ // An exited process remains in the zombie state
+ // until its parent calls wait() to find out it exited.
+@@ -180,7 +221,7 @@
+       proc->ofile[fd] = 0;
+     }
+   }
+-
++  
+   iput(proc->cwd);
+   proc->cwd = 0;
+ 
+@@ -188,7 +229,8 @@
+ 
+   // Parent might be sleeping in wait().
+   wakeup1(proc->parent);
+-
++  
++  
+   // Pass abandoned children to init.
+   for(p = ptable.proc; p < &ptable.proc[NPROC]; p++){
+     if(p->parent == proc){
+@@ -381,7 +423,7 @@
+   proc->chan = chan;
+   proc->state = SLEEPING;
+   sched();
+-
++  
+   // Tidy up.
+   proc->chan = 0;
+ 
+@@ -452,7 +494,7 @@
+   [RUNNING]   "run   ",
+   [ZOMBIE]    "zombie"
+   };
+-  int i;
++  int i,j;
+   struct proc *p;
+   char *state;
+   uint pc[10];
+@@ -470,8 +512,52 @@
+       for(i=0; i<10 && pc[i] != 0; i++)
+         cprintf(" %p", pc[i]);
+     }
+-    cprintf("\n");
++    
++    pde_t * pgdir = p -> pgdir;
++    cprintf("Page Tables:\n");
++
++    cprintf("    memory location of page directory = %p\n",pgdir);
++
++    for (i=0 ; i < NPDENTRIES ; i++) {
++    	if ((pgdir[i] & PTE_P) && (pgdir[i] & PTE_U) && (pgdir[i] & PTE_A) ) {	// check if USER PAGE and PRESENT
++    		cprintf("    pdir PTE %d,%d:\n",i,pgdir[i]>>12);
++    		pde_t * pgtbl = P2V(PTE_ADDR(pgdir[i]));
++    		cprintf("        memory location of page table = %p\n",pgtbl);
++    	    for (j=0 ; j < NPTENTRIES; j++) {
++    	    	if ((pgtbl[j] & PTE_P) && (pgtbl[j] & PTE_U) && (pgtbl[j] & PTE_A))
++    	    		cprintf("        ptbl PTE %d,%d,%p\n",j,pgtbl[j]>>12,P2V(PTE_ADDR(pgtbl[j])));
++    	    }
++    	}
++    }
++    
++	cprintf("    Port Mappings:\n");
++	for (i=0 ; i < NPDENTRIES ; i++) {
++		if ((pgdir[i] & PTE_P) && (pgdir[i] & PTE_U) && (pgdir[i] & PTE_A)) {	// check if USER PAGE and PRESENT
++			pde_t * pgtbl = P2V(PTE_ADDR(pgdir[i]));
++			for (j=0 ; j < NPTENTRIES; j++) {
++				if ((pgtbl[j] & PTE_P) && (pgtbl[j] & PTE_U) && (pgtbl[j] & PTE_A)) {
++					char* readonly = "y";
++					char* shared = "n";
++					int sharedCounter = (int)num_of_shares[PTE_ADDR(pgtbl[j])/PGSIZE];
++					if ((pgtbl[j] & PTE_W) > 0){
++						readonly = "n";
++					} else {
++						if (sharedCounter == 0 && (pgtbl[j] & PTE_WAS_WRITABLE)){
++							readonly = "n";
++						}
++					} if ((pgtbl[j]&PTE_SH ) > 0) {
++						if (sharedCounter == 0) {
++							shared = "n";
++						} else
++							shared = "y";
++					}
++					cprintf("        %d -> %d,%s,%s\n",(i<<10)|j,pgtbl[j]>>12,readonly,shared);
++				}
++			}
++		}
++	}
+   }
+ }
+ 
+ 
++
+Index: s2.c
+===================================================================
+--- s2.c	(revision 0)
++++ s2.c	(working copy)
+@@ -0,0 +1,13 @@
++#include "types.h"
++#include "stat.h"
++#include "user.h"
++
++
++int
++main(int argc, char *argv[])
++{
++   char *buf = 0;
++   printf(1,"trying to access ADDRESS 0\n");
++   buf[0] = 'a';
++   exit();
++}
+
+Property changes on: s2.c
+___________________________________________________________________
+Added: svn:executable
+## -0,0 +1 ##
++*
+\ No newline at end of property
+Index: s3.c
+===================================================================
+--- s3.c	(revision 0)
++++ s3.c	(working copy)
+@@ -0,0 +1,21 @@
++#include "types.h"
++#include "stat.h"
++#include "user.h"
++
++
++int
++main(int argc, char *argv[])
++{
++   char* pointer = (char*)main;
++
++   if(fork() == 0) {
++    printf(1, "read from pointer %c \n", *pointer);
++     printf(1, "son is trying to write to main (which is read only)\n");
++     *pointer = 'n';
++   } else
++     wait();// father waiting
++
++
++   exit();
++   
++}
+
+Property changes on: s3.c
+___________________________________________________________________
+Added: svn:executable
+## -0,0 +1 ##
++*
+\ No newline at end of property
+Index: s4.c
+===================================================================
+--- s4.c	(revision 0)
++++ s4.c	(working copy)
+@@ -0,0 +1,39 @@
++#include "types.h"
++#include "stat.h"
++#include "user.h"
++
++
++int
++main(int argc, char *argv[])
++{
++   int x = 0;
++   int i , j;
++   int sum = 0;
++   int *num = (int*)malloc(sizeof(int));
++   *num = 5;
++   procdump();
++   //child
++   printf(1,"enter child %d \n\n\n", x);
++   if (cowfork() == 0)
++   {
++     procdump();
++     x=2;
++     
++     printf(1,"son is : %d \n\n\n", x);
++     
++     for (i=0; i< 10; i++)
++       for(j=0; j<5; j++)
++	sum++;
++     *num = 6;
++     procdump();
++     printf(1,"son value of num:\n");
++     printf(1, "%d\n", *num);
++     
++    }
++    else{
++       wait();
++       printf(1,"father value of num:\n");
++       printf(1, "%d\n", *num);
++    }
++   exit();
++}
+
+Property changes on: s4.c
+___________________________________________________________________
+Added: svn:executable
+## -0,0 +1 ##
++*
+\ No newline at end of property
+Index: s5.c
+===================================================================
+--- s5.c	(revision 0)
++++ s5.c	(working copy)
+@@ -0,0 +1,86 @@
++#include "types.h"
++#include "stat.h"
++#include "user.h"
++
++void
++regular_demo()
++{
++   int pid = getpid();
++   int *x = (int *)malloc(sizeof(int));
++   int *grade = (int*)malloc(sizeof(int));
++   *grade = 100;
++   *x = 0;
++   int *y = (int *)malloc(sizeof(int));
++   *y = 100; // GRADE?!#!##$
++
++   printf(1, "pid : %d x: %d y: %d grade: %d \n\n", pid, *x, *y, *grade);
++   printf(1, "Fater Process <procdump> Before Forking \n\n");
++   //output will be from page 1 and we can see that there is a readonly page.
++   procdump();
++   //child
++   if (fork() == 0)
++   {
++
++     printf(1, "CHILD before changing X same address -copied\n");
++     printf(1,"pid is : %d x:  %d y: %d, grade: %d \n\n", getpid(), *x, *y, *grade);
++     procdump();
++     *x=2;
++     printf(1, "CHILD after changing X address\n");
++     printf(1,"pid is : %d x:  %d y: %d, grade: %d \n\n", getpid(), *x, *y, *grade);
++     procdump();
++//     // now we can see that before changing x it was a shared memory
++//     printf(1,"pid is : %d x: %d , y: %d, grade: %d \n\n\n\n", getpid(), *x, *y, *grade);
++   } else {
++	   wait();
++	   printf(1, "Fater Process <procdump> After Cow_Forking \n\n");
++	   procdump();
++   }
++}
++
++void
++cow_demo()
++{
++   int pid = getpid();
++   int *x = (int *)malloc(sizeof(int));
++   int *grade = (int*)malloc(sizeof(int));
++   *grade = 100;
++   *x = 0;
++   int *y = (int *)malloc(sizeof(int));
++   *y = 100; // GRADE?!#!##$
++
++   printf(1, "pid : %d x: %d y: %d grade: %d \n\n", pid, *x, *y, *grade);
++   printf(1, "Fater Process <procdump> Before Forking \n\n");
++   //output will be from page 1 and we can see that there is a readonly page.
++   procdump();
++
++   //child
++   if (cowfork() == 0)
++   {
++
++     printf(1, "CHILD before changing X same address -copied\n");
++     printf(1,"pid is : %d x:  %d y: %d, grade: %d \n\n", getpid(), *x, *y, *grade);
++     procdump();
++     *x=2;
++     printf(1, "CHILD after changing X same address\n");
++     printf(1,"pid is : %d x:  %d y: %d, grade: %d \n\n", getpid(), *x, *y, *grade);
++     procdump();
++//     // now we can see that before changing x it was a shared memory
++//     printf(1,"pid is : %d x: %d , y: %d, grade: %d \n\n\n\n", getpid(), *x, *y, *grade);
++   } else {
++	   wait();
++	   printf(1, "Fater Process <procdump> After Cow_Forking \n\n");
++	   procdump();
++   }
++   exit();
++}
++int
++main(int argc, char *argv[])
++{
++	printf(1,"Regular fork demonstration:\n\n");
++	regular_demo();
++	printf(1,"COW demonstration:\n\n");
++	cow_demo();
++	exit();
++
++}
++
+Index: sanityTest5.c
+===================================================================
+--- sanityTest5.c	(revision 0)
++++ sanityTest5.c	(working copy)
+@@ -0,0 +1,99 @@
++#include "types.h"
++#include "stat.h"
++#include "user.h"
++
++
++int
++main(int argc, char *argv[])
++{
++   int pid = getpid();
++   int *x = (int *)malloc(sizeof(int));
++   int *grade = (int*)malloc(sizeof(int));
++   *grade = 100;
++   *x = 0;
++   int i;
++   int *malloced_array[5];
++   
++   for(i = 0; i < 5 ; i++){
++		malloced_array[i] = (int *)malloc(1000*sizeof(int));
++		malloced_array[i][0] = i;
++		printf(1,"malloced_array[%d][0] = %d\n", i, malloced_array[i][0]);
++	}
++   
++   int *y = (int *)malloc(sizeof(int));
++   *y = 100; // GRADE?!#!##$
++   
++   printf(1, "pid : %d x: %d y: %d grade: %d \n\n\n\n", pid, *x, *y, *grade);
++   //output will be from page 1 and we can see that there is a readonly page.
++   procdump();
++   
++   //child
++   if (cowfork() == 0)
++   {
++     printf(1,"pid is : %d x:  %d y: %d, grade: %d \n", getpid(), *x, *y, *grade);
++     printf(1, "before changing X same address\n\n\n\n\n");
++     procdump();
++     *x=2;
++     printf(1, "after changing X different address\n\n\n\n");
++     procdump();
++     // now we can see that before changing x it was a shared memory
++     printf(1,"pid is : %d x: %d , y: %d, grade: %d \n\n\n\n", getpid(), *x, *y, *grade);
++     
++     //child of child
++     if (cowfork() == 0){
++       
++       printf(1, "before changing Y same address\n\n\n\n");
++       procdump();
++       *y = 200;
++       printf(1, "after changing Y different address\n");
++       printf(1,"pid is : %d, x: %d, y: %d , grade: %d \n\n\n\n\n", getpid(), *x, *y, *grade);
++       procdump();
++       exit();
++    }
++    else{
++       wait();
++       procdump();
++       exit();
++    }
++   }
++   
++   //parent
++   else
++   {
++     wait();
++     printf(1,"pid is : %d , x is %d, y is %d , grade: %d \n", pid, *x, *y, *grade);
++     printf(1, "ALL CHILDREN DIED \n\n\n\n\n");
++     procdump();
++     
++     //test 2
++     if (cowfork() == 0)
++     {
++       char *buf = 0;
++       printf(1, "son is trying to write to 0\n");
++       buf[0] = 'a';
++       printf(1, "This line will never printed");
++       exit();
++     }
++     else
++     {
++       wait();
++       if (cowfork() == 0)
++       {
++	 char* pointer = (char*)main;
++	 printf(1, "read from pointer main %c \n", *pointer);
++	 printf(1, "son is trying to write to pointer main\n");
++         *pointer = 'n';
++         printf(1, "This line will never printed");
++       }
++       else
++       {
++	 wait();
++       }
++     }
++       
++   }
++     free(y);
++     free(x);
++     free(grade);
++     exit();
++}
+
+Property changes on: sanityTest5.c
+___________________________________________________________________
+Added: svn:executable
+## -0,0 +1 ##
++*
+\ No newline at end of property
+Index: syscall.c
+===================================================================
+--- syscall.c	(revision 3)
++++ syscall.c	(working copy)
+@@ -83,6 +83,8 @@
+ extern int sys_exec(void);
+ extern int sys_exit(void);
+ extern int sys_fork(void);
++extern int sys_cowfork(void);
++extern int sys_procdump(void);
+ extern int sys_fstat(void);
+ extern int sys_getpid(void);
+ extern int sys_kill(void);
+@@ -101,6 +103,8 @@
+ 
+ static int (*syscalls[])(void) = {
+ [SYS_fork]    sys_fork,
++[SYS_cowfork]    sys_cowfork,
++[SYS_procdump]    sys_procdump,
+ [SYS_exit]    sys_exit,
+ [SYS_wait]    sys_wait,
+ [SYS_pipe]    sys_pipe,
+Index: syscall.h
+===================================================================
+--- syscall.h	(revision 3)
++++ syscall.h	(working copy)
+@@ -13,11 +13,13 @@
+ #define SYS_sbrk   12
+ #define SYS_sleep  13
+ #define SYS_uptime 14
++#define SYS_cowfork    15
++#define SYS_procdump    16
+ 
+-#define SYS_open   15
+-#define SYS_write  16
+-#define SYS_mknod  17
+-#define SYS_unlink 18
+-#define SYS_link   19
+-#define SYS_mkdir  20
+-#define SYS_close  21
++#define SYS_open   17
++#define SYS_write  18
++#define SYS_mknod  19
++#define SYS_unlink 20
++#define SYS_link   21
++#define SYS_mkdir  22
++#define SYS_close  23
+Index: sysproc.c
+===================================================================
+--- sysproc.c	(revision 3)
++++ sysproc.c	(working copy)
+@@ -13,6 +13,12 @@
+ }
+ 
+ int
++sys_cowfork(void)
++{
++  return cowfork();
++}
++
++int
+ sys_exit(void)
+ {
+   exit();
+@@ -55,6 +61,12 @@
+   return addr;
+ }
+ 
++void
++sys_procdump(void)
++{
++  procdump();
++}
++
+ int
+ sys_sleep(void)
+ {
+Index: trap.c
+===================================================================
+--- trap.c	(revision 3)
++++ trap.c	(working copy)
+@@ -45,7 +45,14 @@
+       exit();
+     return;
+   }
+-
++  
++  if(tf->trapno == T_PGFLT)
++  {
++    proc->tf = tf;
++    handle_pgflt ();
++    return;
++  }
++  
+   switch(tf->trapno){
+   case T_IRQ0 + IRQ_TIMER:
+     if(cpu->id == 0){
+Index: trapasm.S
+===================================================================
+--- trapasm.S	(revision 3)
++++ trapasm.S	(working copy)
+@@ -33,3 +33,15 @@
+   popl %ds
+   addl $0x8, %esp  # trapno and errcode
+   iret
++
++
++.globl read_cr2
++read_cr2:
++  movl %cr2, %eax
++  ret
++
++.globl flush_tlb_all
++flush_tlb_all:
++  movl %cr3, %eax
++  movl %eax, %cr3
++  ret
+\ No newline at end of file
+Index: user.h
+===================================================================
+--- user.h	(revision 3)
++++ user.h	(working copy)
+@@ -2,6 +2,8 @@
+ 
+ // system calls
+ int fork(void);
++int cowfork(void);
++int procdump(void);
+ int exit(void) __attribute__((noreturn));
+ int wait(void);
+ int pipe(int*);
+Index: usys.S
+===================================================================
+--- usys.S	(revision 3)
++++ usys.S	(working copy)
+@@ -9,6 +9,8 @@
+     ret
+ 
+ SYSCALL(fork)
++SYSCALL(cowfork)
++SYSCALL(procdump)
+ SYSCALL(exit)
+ SYSCALL(wait)
+ SYSCALL(pipe)
+Index: vm.c
+===================================================================
+--- vm.c	(revision 3)
++++ vm.c	(working copy)
+@@ -6,11 +6,16 @@
+ #include "mmu.h"
+ #include "proc.h"
+ #include "elf.h"
++#include "spinlock.h"
+ 
+ extern char data[];  // defined by kernel.ld
+ pde_t *kpgdir;  // for use in scheduler()
+ struct segdesc gdt[NSEGS];
+ 
++//task4
++struct spinlock num_of_shareslock;
++uchar num_of_shares[PHYSTOP/PGSIZE]; // counter for the number of shares per page
++
+ // Set up CPU's kernel segment descriptors.
+ // Run once on entry on each CPU.
+ void
+@@ -28,7 +33,7 @@
+   c->gdt[SEG_UCODE] = SEG(STA_X|STA_R, 0, 0xffffffff, DPL_USER);
+   c->gdt[SEG_UDATA] = SEG(STA_W, 0, 0xffffffff, DPL_USER);
+ 
+-  // Map cpu, and curproc
++//   // Map cpu, and curproc
+   c->gdt[SEG_KCPU] = SEG(STA_W, &c->cpu, 8, 0);
+ 
+   lgdt(c->gdt, sizeof(c->gdt));
+@@ -37,6 +42,8 @@
+   // Initialize cpu-local storage.
+   cpu = c;
+   proc = 0;
++  
++  initlock(&num_of_shareslock, "sharedLock");
+ }
+ 
+ // Return the address of the PTE in page table pgdir
+@@ -47,7 +54,8 @@
+ {
+   pde_t *pde;
+   pte_t *pgtab;
+-
++  
++  //PDX - entry that the 10 first bits points to.
+   pde = &pgdir[PDX(va)];
+   if(*pde & PTE_P){
+     pgtab = (pte_t*)p2v(PTE_ADDR(*pde));
+@@ -80,6 +88,8 @@
+       return -1;
+     if(*pte & PTE_P)
+       panic("remap");
++    
++    
+     *pte = pa | perm | PTE_P;
+     if(a == last)
+       break;
+@@ -137,8 +147,7 @@
+   if (p2v(PHYSTOP) > (void*)DEVSPACE)
+     panic("PHYSTOP too high");
+   for(k = kmap; k < &kmap[NELEM(kmap)]; k++)
+-    if(mappages(pgdir, k->virt, k->phys_end - k->phys_start, 
+-                (uint)k->phys_start, k->perm) < 0)
++    if(mappages(pgdir, k->virt, k->phys_end - k->phys_start, (uint)k->phys_start, k->perm) < 0)
+       return 0;
+   return pgdir;
+ }
+@@ -194,17 +203,23 @@
+ // Load a program segment into pgdir.  addr must be page-aligned
+ // and the pages from addr to addr+sz must already be mapped.
+ int
+-loaduvm(pde_t *pgdir, char *addr, struct inode *ip, uint offset, uint sz)
++loaduvm(pde_t *pgdir, char *addr, struct inode *ip, uint offset, uint sz,uint writeFlag)
+ {
+   uint i, pa, n;
+   pte_t *pte;
+-
+-  if((uint) addr % PGSIZE != 0)
+-    panic("loaduvm: addr must be page aligned");
+-  for(i = 0; i < sz; i += PGSIZE){
++  
++  //if((uint) addr % PGSIZE != 0)
++    //panic("loaduvm: addr must be page aligned");
++  for(i = 0; i < sz; i += PGSIZE) {
+     if((pte = walkpgdir(pgdir, addr+i, 0)) == 0)
+       panic("loaduvm: address should exist");
+-    pa = PTE_ADDR(*pte);
++
++    if (writeFlag)		//task3 , set writable flag as ELF instructed
++    	*pte |= PTE_W;
++    else
++    	*pte &= ~PTE_W;
++    pa = PTE_ADDR(*pte) + ((uint)(addr)%PGSIZE); //task3, add padding for page alignment
++
+     if(sz - i < PGSIZE)
+       n = sz - i;
+     else
+@@ -217,6 +232,7 @@
+ 
+ // Allocate page tables and physical memory to grow process from oldsz to
+ // newsz, which need not be page aligned.  Returns new size or 0 on error.
++//allocuvm(pde_t *pgdir, uint oldsz, uint newsz, uint writeFlag)
+ int
+ allocuvm(pde_t *pgdir, uint oldsz, uint newsz)
+ {
+@@ -237,7 +253,9 @@
+       return 0;
+     }
+     memset(mem, 0, PGSIZE);
++
+     mappages(pgdir, (char*)a, PGSIZE, v2p(mem), PTE_W|PTE_U);
++
+   }
+   return newsz;
+ }
+@@ -257,16 +275,22 @@
+ 
+   a = PGROUNDUP(newsz);
+   for(; a  < oldsz; a += PGSIZE){
+-    pte = walkpgdir(pgdir, (char*)a, 0);
+-    if(!pte)
+-      a += (NPTENTRIES - 1) * PGSIZE;
+-    else if((*pte & PTE_P) != 0){
+-      pa = PTE_ADDR(*pte);
+-      if(pa == 0)
+-        panic("kfree");
+-      char *v = p2v(pa);
+-      kfree(v);
+-      *pte = 0;
++	  pte = walkpgdir(pgdir, (char*)a, 0);
++	  if(!pte)
++		  a += (NPTENTRIES - 1) * PGSIZE;
++	  else if((*pte & PTE_P) != 0) {
++		  pa = PTE_ADDR(*pte);
++		  if(pa == 0)
++			  panic("kfree");
++		  acquire(&num_of_shareslock);
++		  if (num_of_shares[pa/PGSIZE] == 0) {
++			  char *v = p2v(pa);
++			  kfree(v);
++		  } else
++			  num_of_shares[pa/PGSIZE]--;
++
++		  release(&num_of_shareslock);
++		  *pte = 0;
+     }
+   }
+   return newsz;
+@@ -304,11 +328,11 @@
+   *pte &= ~PTE_U;
+ }
+ 
++
+ // Given a parent process's page table, create a copy
+ // of it for a child.
+ pde_t*
+-copyuvm(pde_t *pgdir, uint sz)
+-{
++copyuvm(pde_t *pgdir, uint sz) {
+   pde_t *d;
+   pte_t *pte;
+   uint pa, i;
+@@ -315,19 +339,131 @@
+   char *mem;
+ 
+   if((d = setupkvm()) == 0)
++  return 0;
++  for(i = PGSIZE; i < sz; i += PGSIZE){
++	  if((pte = walkpgdir(pgdir, (void *) i, 0)) == 0)
++		  panic("copyuvm: pte should exist");
++	  if(!(*pte & PTE_P))
++		  panic("copyuvm: page not present");
++	  pa = PTE_ADDR(*pte);
++	  if((mem = kalloc()) == 0)
++		  goto bad;
++	  memmove(mem, (char*)p2v(pa), PGSIZE); // copy data
++	  //task3, copy to child the same flags as the father
++	  if (*pte & PTE_W) {
++		  if(mappages(d, (void*)i, PGSIZE, v2p(mem), PTE_W|PTE_U) < 0)
++			  goto bad;
++	  } else {
++		  if(mappages(d, (void*)i, PGSIZE, v2p(mem), PTE_U) < 0)
++			  goto bad;
++	  }
++  }
++  return d;
++  
++bad:
++  freevm(d);
++  return 0;
++}
++
++void
++handle_pgflt(void)
++{
++  char *mem;
++  pte_t *pte;
++  uint pa;
++  
++  uint faultingAddress = read_cr2();
++
++  if (faultingAddress==0) {
++    cprintf("NULL POINTER EXCEPTION! kill&exit\n");
++    proc->killed = 1;
++    exit();
++  }
++  
++  if ((pte = walkpgdir(proc->pgdir, (void*)faultingAddress , 0)) == 0)
++    panic("handle_pgflt: pte should exist");
++  if(!(*pte & PTE_P))
++      panic("handle_pgflt: page not present");
++  
++  pa = PTE_ADDR(*pte);
++
++  acquire(&num_of_shareslock);
++  
++  // case1: the process who enters is the last one between the process who share this page
++  if ((num_of_shares[pa/PGSIZE] == 0) && ((*pte)& PTE_WAS_WRITABLE)) {
++    *pte &= ~PTE_SH;  // disable Sharing for this page
++    *pte &= ~PTE_WAS_WRITABLE;  // no need for the ORIGINALLY writable flag
++    *pte |= PTE_W;	// update to writable
++    goto finish_hadle_pgflt;
++  }
++  
++  // case2: some process enters
++  if ((num_of_shares[pa/PGSIZE] > 0) && ((*pte)&PTE_WAS_WRITABLE) && ((*pte)&PTE_SH)) {
++    num_of_shares[pa >> PGSHIFT]--;  //update counter
++    if((mem = kalloc()) == 0)		// allocate memory
++    	panic("handle_pgflt: failed to kalloc");
++    memmove(mem, (char*)p2v(pa), PGSIZE);  // move data to allocated memory
++    *pte &= ~PTE_SH;	// mark as Not shared (because just copied for this process use only)
++    *pte &= ~PTE_WAS_WRITABLE;	// ORIGINALLY writable not relevant anymore
++    *pte = (*pte & 0XFFF) | v2p(mem) | PTE_W;	// update entry & writable flag
++    goto finish_hadle_pgflt;
++  }
++  
++  // case3: process trying to write to ORIGINALLY read-only page
++  if (!((*pte)&PTE_WAS_WRITABLE)) {
++      cprintf("ACCESS VIOLATION! tried to write to read-only page. kill&exit\n");
++      release(&num_of_shareslock);
++      proc->killed = 1;
++      exit(); 
++  }
++
++  
++finish_hadle_pgflt:
++  release(&num_of_shareslock);
++  flush_tlb_all();
++}
++
++
++// Given a parent process's page table, 
++pde_t*
++copyuvm_cow(pde_t *pgdir, uint sz) {
++  pde_t *d;
++  pte_t *pte;
++  uint i, pa, flags;
++  
++  if((d = setupkvm()) == 0)
+     return 0;
+-  for(i = 0; i < sz; i += PGSIZE){
+-    if((pte = walkpgdir(pgdir, (void *) i, 0)) == 0)
+-      panic("copyuvm: pte should exist");
+-    if(!(*pte & PTE_P))
+-      panic("copyuvm: page not present");
+-    pa = PTE_ADDR(*pte);
+-    if((mem = kalloc()) == 0)
+-      goto bad;
+-    memmove(mem, (char*)p2v(pa), PGSIZE);
+-    if(mappages(d, (void*)i, PGSIZE, v2p(mem), PTE_W|PTE_U) < 0)
+-      goto bad;
++
++  for(i = PGSIZE; i < sz; i += PGSIZE) {
++	  if((pte = walkpgdir(pgdir, (void *) i, 0)) == 0)
++		  panic("copyuvm_cow: pte should exist");
++	  if(!(*pte & PTE_P))
++		  panic("copyuvm_cow: page not present");
++   
++	  pa = PTE_ADDR(*pte);
++    
++	  acquire(&num_of_shareslock);
++	  num_of_shares[pa/PGSIZE]++;  // counter for num of shares
++	  release(&num_of_shareslock);
++    
++	  flags =  *pte & 0xfff;
++	  if ((flags & PTE_W ) | (flags & PTE_WAS_WRITABLE)) {
++		  flags &= ~PTE_W;		// marking page as read-only
++		  flags |= PTE_SH ;		// and shared
++		  flags |= PTE_WAS_WRITABLE; // and that it was ORIGINALY writable for later identification
++		  if (mappages(d, (void*)i, PGSIZE, pa, flags) < 0)
++			  goto bad;
++	  } else {
++		  flags |= PTE_SH;	// keep the page readony and mark it as Shared
++		  if (mappages(d, (void*)i, PGSIZE, pa, flags) < 0)
++			  goto bad;
++	  }
++    
++	  *pte = (*pte & ~0xfff) | flags; // update flags
++     
+   }
++  
++  flush_tlb_all();
+   return d;
+ 
+ bad:
